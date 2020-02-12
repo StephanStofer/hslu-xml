@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format"
+         xmlns:axf="http://www.antennahouse.com/names/XSL/Extensions">
+  <fo:layout-master-set>
+
+    <fo:simple-page-master master-name="PrinterMarks" page-width="210mm" page-height="297mm" margin="20mm" >
+      <fo:region-body margin-top="20mm" margin-bottom="20mm" />
+      <fo:region-before extent="20mm" precedence="true"/>
+      <fo:region-after extent="20mm" display-align="after" precedence="true"/>
+    </fo:simple-page-master>
+
+  </fo:layout-master-set>
+
+
+
+  <fo:page-sequence master-reference="PrinterMarks" font-size="15pt" font-family="Times">
+    <fo:static-content flow-name="xsl-region-before" font-size="20pt">
+      <fo:block text-align="center">New Functions with V3.3</fo:block>
+      <fo:block text-align="center" font-size="15pt" font-weight="bold" background-color="black" color="white">SVG Output</fo:block>
+    </fo:static-content>
+    <fo:static-content flow-name="xsl-region-after" font-size="20pt">
+      <fo:block text-align="center"><fo:page-number/></fo:block>
+      <fo:block font-size="15pt">XSL FO Sample Copyright (C) 2005 Antenna House, Inc. All rights reserved.</fo:block>
+    </fo:static-content>
+
+    <fo:flow flow-name="xsl-region-body" >
+      <fo:block space-before="15pt" space-before.conditionality="retain">
+        <fo:block text-indent="1em" font-size="20pt" font-weight="bold" background-color="blue" color="white">XSL Formatter SVG Option</fo:block>
+        <fo:block space-before="10pt">XSL Formatter V3.3 can now product SVG output compliant to W3C Scalable Vector Graphics (SVG) 1.1 specification. Moreover, it also can output SVG Tiny and SVG Basic in the Mobile SVG Profiles defined by the SVG 1.1 specification.</fo:block>
+        
+        <fo:block space-before="15pt" text-indent="1em" font-weight="bold" background-color="blue" color="white">SVG Output Format</fo:block>
+        <fo:block space-before="10pt">XSL Formatter V3.3 can output any of the SVG 1.1, SVG Basic and SVG Tiny as a SVG profile. When a profile is not specified, it is regarded as SVG 1.1.</fo:block>
+        <fo:block space-before="10pt">Mobile SVG Profiles are the specifications for mobile computing devices or cellular phones which have restrictions in the throughput of the hardware, the memory capacity and the number of colors that can be displayed.</fo:block>
+        <fo:block space-before="10pt">Since SVG Tiny is for the hardware with the most restrictions, like a cellular phone, it may contain a lot of elements that are not supported or may have restrictions. Therefore, the reproduction level of the original document before transformation may be low.</fo:block>
+        <fo:block space-before="10pt">SVG Basic is for more high-efficient pocket devices, such as high-efficient PDA, and has fewer restrictions than SVG Tiny. See also Mobile SVG Profiles for more details.</fo:block>
+        <fo:block space-before="10pt">XSL Formatter V3.3 outputs SVG Tiny and SVG Basic on the basis of the output for SVG 1.1 by disregarding the unsupported elements.</fo:block>
+      </fo:block>
+    </fo:flow>
+  </fo:page-sequence>
+
+
+
+</fo:root>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<forum>
+    <posts>
+        <post isQuestion="true" id="1">
+            <eventId>1</eventId>
+            <name>foo</name>
+            <content>bar</content>
+        </post>
+        <post isQuestion="false" qId="1" id="1">
+            <eventId>1</eventId>
+            <name>answer1</name>
+            <content>answercontent1</content>
+        </post>
+        <post isQuestion="true" id="2">
+            <eventId>1</eventId>
+            <name>foo2</name>
+            <content>bar2</content>
+        </post>
+        <post isQuestion="false" qId="1" id="1">
+            <eventId>1</eventId>
+            <name>answer2</name>
+            <content>answercontent2</content>
+        </post>
+        <post isQuestion="false" qId="2" id="1">
+            <eventId>1</eventId>
+            <name>answersecond</name>
+            <content>answercontentsecond</content>
+        </post>
+    </posts>
+</forum>

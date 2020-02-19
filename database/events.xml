@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../frontend/xslt/events.xsl"?>
+<events xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="events.xsd">
+    <event id="e8e6633f-be9f-4596-8369-e840a50a8be8" type="sport">
+        <name>Schwimmen / Aqua-Fitness</name>
+        <description>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt amet dicta fuga mollitia! Explicabo neque veniam quod consequatur? Atque perferendis dignissimos velit quam eius laudantium ratione sint qui reprehenderit veniam!
+        </description>
+        <participants>
+            <person firstName="Hand" lastName="Meier" address="Bahnhofstrasse 10" postCode="6005" city="Luzern" email="hans.meier@gmx.net" phone="+41412601549" />
+        </participants>
+        <additionalServices>
+            <service title="Schwimmring" price="15" id="1" />
+            <service title="Betreuung" price="80" id="2" />
+        </additionalServices>
+        <settings>
+            <image path="../frontend/img/schwimmen.jpg" alt="Bild von Menschen mit Beeinträchtigung im Schwimmbecken." />
+        </settings>
+    </event>
+    <event id="3926c5a3-ffa1-4d90-8498-12fb65e86637" type="sport">
+        <name>Klettern</name>
+        <description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga vitae exercitationem nemo mollitia ut, maxime fugit odio culpa minus. Magni vel sunt rerum qui veniam voluptatibus maxime deserunt, fuga aperiam.</description>
+        <participants></participants>
+        <additionalServices>
+        </additionalServices>
+        <settings>
+            <image path="../frontend/img/klettern.jpg" alt="Bild von Menschen mit Beeinträchtigung die am Klettern sind."/>
+        </settings>
+    </event>
+    <event id="4d7f7f7e-77bd-4601-b569-08210abc0c85" type="sport">
+        <name>Tennis</name>
+        <description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga vitae exercitationem nemo mollitia ut, maxime fugit odio culpa minus. Magni vel sunt rerum qui veniam voluptatibus maxime deserunt, fuga aperiam.</description>
+        <participants></participants>
+        <additionalServices>
+        </additionalServices>
+        <settings>
+            <image path="../frontend/img/tennis.jpg" alt="Bild von Menschen mit Beeinträchtigung die am Klettern sind."/>
+        </settings>
+    </event>
+</events>

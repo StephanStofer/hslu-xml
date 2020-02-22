@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="person.xsd"/>
+    <xs:include schemaLocation="additionalServices.xsd"/>
+    <xs:element name="events">
+        <xs:complexType>
+            <xs:sequence maxOccurs="unbounded">
+                <xs:element ref="event"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="event">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="description" type="xs:string"/>
+                <xs:element ref="participants"/>
+                <xs:element ref="additionalServices"/>
+                <xs:element ref="settings"/>
+            </xs:all>
+            <xs:attribute name="id" type="xs:string" use="required"/>
+            <xs:attribute name="type" type="eventType" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="participants">
+        <xs:complexType>
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                <xs:element ref="person"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="settings">
+        <xs:complexType>
+            <xs:all minOccurs="0">
+                <xs:element ref="image"/>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="image">
+        <xs:complexType>
+            <xs:attribute name="path" type="xs:string" use="required"/>
+            <xs:attribute name="alt" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="eventType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="sport"/>
+            <xs:enumeration value="spa"/>
+            <xs:enumeration value="..."/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

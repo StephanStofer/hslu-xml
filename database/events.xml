@@ -11,9 +11,9 @@
 			<person firstName="Hans" lastName="Meier" address="Bahnhofstrasse 10" postCode="6005" city="Luzern" email="hans.meier@gmx.net" phone="+41412601549"/>
 		</participants>
 		<additionalServices>
-			<service title="Schwimmhilfe" price="15" id="1" />
-			<service title="Betreuung" price="80" id="2" />
-			<service title="Flossen" price="20" id="3" />
+			<service title="Schwimmhilfe" price="15" id="1"/>
+			<service title="Betreuung" price="80" id="2"/>
+			<service title="Flossen" price="20" id="3"/>
 		</additionalServices>
 		<settings>
 			<image path="../frontend/img/schwimmen.jpg" alt="Bild von Menschen mit Beeinträchtigung im Schwimmbecken."/>
@@ -25,7 +25,7 @@
 				Bitte beachten sie die beschränkte Platzzahl. Durch die 1:1 Betreuung können leider nicht mehr Teilnehmer gleichzeitig am Kurs Teilnehmen.</description>
 		<participants/>
 		<additionalServices>
-			<service title="Kletterschuhe" price="15" id="1" />
+			<service title="Kletterschuhe" price="15" id="1"/>
 		</additionalServices>
 		<settings>
 			<image path="../frontend/img/klettern.jpg" alt="Bild von Menschen mit Beeinträchtigung die am Klettern sind."/>
@@ -36,8 +36,8 @@
 		<description>Fünf unserer Aussenplätze sind für die hier angebotenen Kurse reserviert. Bei schlechtem Wetter können Kurse ebenfalls in der Halle angeboten werden.</description>
 		<participants/>
 		<additionalServices>
-			<service title="Trainer" price="60" id="1" />
-			<service title="Balljunge" price="30" id="2" />
+			<service title="Trainer" price="60" id="1"/>
+			<service title="Balljunge" price="30" id="2"/>
 		</additionalServices>
 		<settings>
 			<image path="../frontend/img/tennis.jpg" alt="Bild von Menschen mit Beeinträchtigung Tennis spielen."/>

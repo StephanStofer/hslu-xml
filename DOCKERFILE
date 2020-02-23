@@ -1,0 +1,5 @@
+FROM php:7.4.3-apache
+COPY . /var/www/html/
+RUN apt-get update \
+        && apt-get install -y libxml2-dev libxslt-dev \
+        && docker-php-ext-install dom xmlrpc xsl

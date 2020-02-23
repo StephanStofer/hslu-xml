@@ -1,9 +1,5 @@
 <?xml version="1.0"?>
-<<<<<<< HEAD
-<?xml-stylesheet type="text/xsl" href="../frontend/xslt/singleEvent.xsl"?>
-=======
 <?xml-stylesheet type="text/xsl" href="../frontend/xslt/index.xsl"?>
->>>>>>> events
 <events xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="events.xsd">
 	<event id="e8e6633f-be9f-4596-8369-e840a50a8be8" type="sport">
 		<name>Schwimmen / Aqua-Fitness</name>

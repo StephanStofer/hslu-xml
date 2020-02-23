@@ -27,6 +27,7 @@
             <xs:sequence minOccurs="0" maxOccurs="unbounded">
                 <xs:element ref="person"/>
             </xs:sequence>
+            <xs:attribute name="max" type="xs:integer"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="settings">

@@ -37,14 +37,14 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link" href="../php/index.php">Home <span class="sr-only">(current)</span>
+                        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../php/events.php">Events</a>
+                        <a class="nav-link" href="events.php">Events</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="../php/forum.php">Forum</a>
+                        <a class="nav-link " href="forum.php">Forum</a>
                     </li>
                 </ul>
             </div>

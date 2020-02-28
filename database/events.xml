@@ -18,7 +18,7 @@
 			<service title="Flossen" price="20" id="3"/>
 		</additionalServices>
 		<settings>
-			<image path="../frontend/img/schwimmen.jpg" alt="Bild von Menschen mit Beeinträchtigung im Schwimmbecken."/>
+			<image path="frontend/img/schwimmen.jpg" alt="Bild von Menschen mit Beeinträchtigung im Schwimmbecken."/>
 		</settings>
 	</event>
 	<event id="3926c5a3-ffa1-4d90-8498-12fb65e86637" type="sport" price="140">
@@ -30,7 +30,7 @@
 			<service title="Kletterschuhe" price="15" id="1"/>
 		</additionalServices>
 		<settings>
-			<image path="../frontend/img/klettern.jpg" alt="Bild von Menschen mit Beeinträchtigung die am Klettern sind."/>
+			<image path="frontend/img/klettern.jpg" alt="Bild von Menschen mit Beeinträchtigung die am Klettern sind."/>
 		</settings>
 	</event>
 	<event id="4d7f7f7e-77bd-4601-b569-08210abc0c85" type="sport" price="80">
@@ -42,7 +42,7 @@
 			<service title="Balljunge" price="30" id="2"/>
 		</additionalServices>
 		<settings>
-			<image path="../frontend/img/tennis.jpg" alt="Bild von Menschen mit Beeinträchtigung Tennis spielen."/>
+			<image path="frontend/img/tennis.jpg" alt="Bild von Menschen mit Beeinträchtigung Tennis spielen."/>
 		</settings>
 	</event>
 </events>

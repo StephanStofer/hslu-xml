@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE xml>
-<xsl:stylesheet version="1.0" 
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
-    xmlns="http://www.w3.org/1999/xhtml">
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml">
+	<xsl:param name="eventid" select="default"/>
     <xsl:output method="xml" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" indent="yes"/>
     <xsl:template match="/">
         <html lang="en">
@@ -14,7 +13,7 @@
             <body>
                 <div class="container">
                     <div class="card-deck mb-3">
-                        <xsl:apply-templates select="/events/event[@id='e8e6633f-be9f-4596-8369-e840a50a8be8']"/>
+                        <xsl:apply-templates select="/events/event[@id=$eventid]"/>
                     </div>
                 </div>
                 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

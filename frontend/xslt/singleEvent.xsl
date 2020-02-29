@@ -4,6 +4,11 @@
 	<xsl:param name="eventid" select="default"/>
 	<xsl:output method="xml" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" indent="yes"/>
 	<xsl:include href="page.xsl" />
+	
+	<!--Einschränken auf EINEN Event :-) 
+	hat in der vorderen version funktioniert.. :(
+	<xsl:apply-templates select="/events/event[@id=$eventid]"/>-->
+	
 	<xsl:template match="events/event">
 		<div class="card mb-4 shadow-sm text-center">
 			<div class="card-header">

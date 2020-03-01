@@ -43,7 +43,7 @@
                         <xsl:value-of select="name"/>
                     </li>
                 </ul>
-                <button type="button" class="btn btn-outline-primary" alt="Anmeldung" style="margin-right: 4px;">Anmeldung</button>
+				<a href="singleevent.php?eventid={@id}" class="btn btn-outline-primary">Anmeldung</a>
             </div>
         </div>
     

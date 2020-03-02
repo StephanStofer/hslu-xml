@@ -34,7 +34,7 @@
 						<xsl:value-of select="name"/>
 					</li>
 				</ul>
-				<button type="button" class="btn btn-primary" alt="Forum">Forum</button>
+				<a  class="btn btn-outline-primary" href="forum.php?eventid={@id}">Forum</a>
 				<br/>
 				<br/>
 			</div>

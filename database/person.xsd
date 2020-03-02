@@ -3,7 +3,7 @@
 	<xs:include schemaLocation="additionalServices.xsd"/>
 	<xs:element name="person">
 		<xs:complexType> 
-			<xs:attribute name="id" type="xs:integer" use="required"/>
+			<xs:attribute name="id" type="xs:string" use="required"/>
 			<xs:attribute name="firstName" type="xs:string" use="required"/>
 			<xs:attribute name="lastName" type="xs:string" use="required"/>
 			<xs:attribute name="address" type="xs:string" use="required"/>

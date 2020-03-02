@@ -8,16 +8,17 @@
         <div class="container">
             <div class="jumbotron jumbotron-fluid">
                 <div class="container">
-                    <h1 class="display-4">Fluid jumbotron</h1>
-                    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                    <h1 class="display-4">Sportzentrum Willisau</h1>
+                    <p class="lead"><span>Das herrlich über dem Städtli Willisau gelegene Sportzentrum ist fast einmalig in seiner Art. Im Umkreis von nur 300 m präsentiert sich eine einzigartige Sport-Infrastruktur, welche sich hervorragend eignet für Kurse, Lager und Wettkämpfe. 9 Turnhallen, 5 Rasenfelder, Leichtathletik-Anlagen mit 400m-Bahn, 2 Hartplätze, 4 Beachfelder, Kraftraum, Gymnastikraum, Ringer- und Schwingerhallen, Hallenbad, Freibad, Finnenbahn, Vitaparcours, NordicWalking-Park, Bikegelände, Unterkünfte für 300 Personen, Küchen, Ess-, Theorie- und Aufenthaltsräume, Spielplätze lassen (fast) keine Wünsche offen.  <br/>
+                        Das freundliche, aufgestellte und dienstleistungsfreudige Sportzentrum-Team freut sich auf ihren Besuch.
+                    </span></p>
                 </div>
             </div>
+            <h2 class="mb-3 mt-3">Aktuelle Sportangebote</h2>
             <div class="card-deck">
             <xsl:apply-templates select="event"/>
-            </div>
-            
+            </div>         
         </div>
-
     </xsl:template>
     <xsl:template match="event">
         <div class="card mb-4 shadow-sm text-center">
@@ -35,17 +36,11 @@
                         <xsl:value-of select="settings/image/@alt"/>
                     </xsl:attribute>
                     <xsl:attribute name="class">
-                        <xsl:text>card-img-top</xsl:text>
+                        <xsl:text>card-img-top mb-5</xsl:text>
                     </xsl:attribute>
                 </img>
-                <ul class="list-unstyled mt-3 mb-4">
-                    <li>
-                        <xsl:value-of select="name"/>
-                    </li>
-                </ul>
-				<a href="singleevent.php?eventid={@id}" class="btn btn-outline-primary">Anmeldung</a>
+				<a href="singleevent.php?eventid={@id}" class="btn btn-outline-primary">Details</a>
             </div>
         </div>
-    
     </xsl:template>
 </xsl:stylesheet>

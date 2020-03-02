@@ -8,9 +8,7 @@
 			Selbstverständlich können Sie bei einer Anmeldung auch nur einen Teil des Kurses besuchen.
 		</description>
 		<participants>
-			<person firstName="Hans" lastName="Meier" address="Bahnhofstrasse 10" postCode="6005" city="Luzern" email="hans.meier@gmx.net" phone="+41412601549">
-				<service title="Schwimmhilfe" price="15" id="1"/>
-			</person>
+			<person id="myuniqueId" firstName="Hans" lastName="Meier" address="Bahnhofstrasse 10" postCode="6005" city="Luzern" email="hans.meier@gmx.net" phone="+41412601549"/>
 		</participants>
 		<additionalServices>
 			<service title="Schwimmhilfe" price="15" id="1"/>

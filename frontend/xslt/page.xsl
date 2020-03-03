@@ -4,6 +4,7 @@
     <xsl:template match="/">
         <html lang="en">
             <head>
+                <script src="frontend/js/forum.js" />
                 <xsl:call-template name="header" />
                 <title>Sport für Menschen mit Beeinträchtigungen</title>
             </head>

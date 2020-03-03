@@ -42,7 +42,7 @@
 							</xsl:when>
 							<xsl:otherwise>
 								<h3>Leider ist der Kurs bereits ausgebucht</h3><br/>
-								<button type="button" class="btn btn-primary" alt="Forum">Forum</button>
+								<a href="forum.php?eventid={$eventid}" class="btn btn-outline-primary">Forum</a>
 							</xsl:otherwise>
 						</xsl:choose>
 					</xsl:when>
@@ -95,7 +95,7 @@
 				</xsl:for-each>
 			</div>
 			<button type="submit" name ="send" value="submit" class="btn btn-primary" >Anmelden</button>
-			<button type="button" class="btn btn-primary" alt="Forum">Forum</button>
+			<a href="forum.php?eventid={$eventid}" class="btn btn-outline-primary">Forum</a>
 		</form>
 	</xsl:template>
 </xsl:stylesheet>

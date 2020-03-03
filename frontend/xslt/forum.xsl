@@ -1,64 +1,72 @@
 <?xml version="1.0"  encoding="UTF-8"?>
+<!DOCTYPE xml>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml">
-
-    <!-- set output to XHTML -->
+    <xsl:param name="eventid"/>
     <xsl:output method="xml"
                 doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
                 doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
-                indent="yes" />
+                indent="yes"/>
+    <xsl:include href="page.xsl"/>
+    <xsl:variable name="event"
+                  select="document('../../database/events.xml')/events/event[@id='3926c5a3-ffa1-4d90-8498-12fb65e86637']"/>
 
-    <xsl:variable name="posts" select="document('../../database/forum.xml')/forum"/>
-
-
-    <xsl:template match="/">
-        <html>
-            <head>
-                <link rel="stylesheet" href="../css/bootstrap.min.css"/>
-                <link rel="stylesheet" href="../css/bootstrap-grid.min.css"/>
-                <link rel="stylesheet" href="../css/bootstrap-reboot.min.css"/>
-            </head>
-            <body>
-                <div class="navi">
-                    <h1>Navi</h1>
-                </div>
-
-                <div class="event mt-4">
-                    <h2>Event Beschrieb aus XML....</h2>
-                </div>
-
-                <div class="forum">
-                    <div class="container">
-                        <xsl:apply-templates select="$posts/posts"/>
-                    </div>
-                </div>
-            </body>
-        </html>
+    <xsl:template match="forum">
+        <xsl:apply-templates select="forum"/>
     </xsl:template>
-    <xsl:template match="posts">
-        <xsl:if test="post/@isQuestion='true'">
-            <xsl:variable name="questionId" select="post/@id"/>
-            <div class="question">
-                <div class="row">
-                    <xsl:value-of select="post/name"/>
-                </div>
-                <div class="row">
-                    <xsl:value-of select="post/content"/>
+    <xsl:template match="forum">
+        <div class="card mb-4 shadow-sm text-center">
+            <div class="card-header">
+                <h2 class="my-0 font-weight-normal">
+                    <xsl:value-of select="$event/name"/>
+                </h2>
+            </div>
+            <div class="row justify-content-center mt-4">
+                <img style=";border: 1px solid #ddd; border-radius: 4px;  max-width: 60%;  height: auto;">
+                    <xsl:attribute name="src">
+                        <xsl:value-of select="$event/settings/image/@path"/>
+                    </xsl:attribute>
+                    <xsl:attribute name="alt">
+                        <xsl:value-of select="$event/settings/image/@alt"/>
+                    </xsl:attribute>
+                </img>
+            </div>
+            <div class="row justify-content-center">
+                <div class="mt-4 rounded" style=";max-width:80%;border: 1px solid #ddd;">
+                    <p align="left" class="px-2">
+                        <xsl:value-of select="$event/description"/>
+                    </p>
                 </div>
             </div>
-            <xsl:for-each select="post">
-                <xsl:if test="@isQuestion='false' and $questionId!=@qId">
-                    <xsl:value-of select="$questionId"/>
-                    <xsl:value-of select="@qId"/>
-                    <div class="answer">
-                        <div class="row">
-                            <xsl:value-of select="name"/>
-                        </div>
-                        <div class="row">
-                            <xsl:value-of select="content"/>
-                        </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8 mt-4 rounded" style=";max-width:50%;border: 1px solid #ddd;">
+                    <div align="left" class="border-bottom">
+                        Von:  <span style="margin-left: 24px"> <xsl:value-of select="event/question/firstName"/></span>
                     </div>
-                </xsl:if>
-            </xsl:for-each>
-        </xsl:if>
+
+                    <div align="left">
+                        Frage: <span style="margin-left: 10px"> <xsl:value-of select="event/question/content"/></span>
+                    </div>
+                </div>
+            </div>
+            <form class="form needs-validation mt-4 mb-4" action="frontend/php/insertQuestion.php" method="POST"
+                  accept-charset="UTF-8">
+                <input type="hidden" name="eventid" value="{$eventid}"/>
+                <div class="form-row justify-content-center">
+                    <div class="form-group col-md-6">
+                        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Vorname"
+                               required="true"/>
+                    </div>
+                </div>
+                <div class="form-row justify-content-center">
+                    <div class="form-group col-md-6">
+                        <textarea class="form-control" id="question" name="question" placeholder="Frage"
+                                  required="true"/>
+                    </div>
+                </div>
+                <div class="form-row justify-content-center mt-4">
+                    <button type="submit" name="sendQuestion" value="submit" class="btn btn-primary">Post</button>
+                </div>
+            </form>
+        </div>
     </xsl:template>
 </xsl:stylesheet>

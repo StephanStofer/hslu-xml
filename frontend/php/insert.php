@@ -53,7 +53,7 @@ if(isset($_POST['send'])){
 	if ($validated) {
 		$dom->save($xml);
 		//TODO instead of Echo -> confirmation page with FO Document download
-		echo "saved in xml";
+		header('Location: ../../index.php');
 	} else {
 		//TODO instead of Print errors -> errorpage with a hint on what input to improve :)
 		print_r($validator->displayErrors());

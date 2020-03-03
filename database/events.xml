@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../frontend/xslt/index.xsl"?>
 <events xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="events.xsd">
-	<event id="e8e6633f-be9f-4596-8369-e840a50a8be8" type="sport" price="20">
+	<event id="e8e6633f-be9f-4596-8369-e840a50a8be8" type="sport" price="20" maxparticipants="8">
 		<name>Schwimmen / Aqua-Fitness</name>
 		<description>Der Schwimm und Aquafit Kurs besteht, wie schon der Name, aus zwei Teilen. Anfangen werden wir mit einem Warumup in der ganzen Gruppe. Hier werden wir w&#xE4;hrend rund 40 Minuten &#xDC;bungen durchf&#xFC;hren, die der allgemeinen Beweglichkeit dienen und die Muskeln stimulieren
 		Im zweiten Teil k&#xF6;nnen Sie w&#xE4;hrend 90 Minuten unter Aufsicht und Betreuung Strecken schwimmen.
 			Selbstverst&#xE4;ndlich k&#xF6;nnen Sie bei einer Anmeldung auch nur einen Teil des Kurses besuchen.
 		</description>
 		<participants>
-
-		<person id="5e5e339ada9c6" firstName="Maurizio" lastName="Hostettler" address="Gr&#xFC;nerweg 5" city="Bern" postCode="3013" email="maurizio.hostettler@gmail.com" phone="+41795406870" op1="selected" op3="selected"/><person id="5e5e34c28241f" firstName="Maurizio" lastName="Hostettler" address="Gr&#xFC;nerweg 5" city="Bern" postCode="3013" email="maurizio.hostettler@gmail.com" phone="+41795406870" op1="selected" op3="selected"/></participants>
+			<person id="5e5e339ada9c6" firstName="Maurizio" lastName="Hostettler" address="Gr&#xFC;nerweg 5" city="Bern" postCode="3013" email="maurizio.hostettler@gmail.com" phone="+41795406870" op1="selected" op3="selected"/>
+		</participants>
 		<additionalServices>
 			<service title="Schwimmhilfe" price="15" id="1"/>
 			<service title="Betreuung" price="80" id="2"/>

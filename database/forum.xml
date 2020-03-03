@@ -1,15 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<?xml-stylesheet type="text/xsl" href="../frontend/xslt/forum.xsl"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--<?xml-stylesheet type="text/xsl" href="../frontend/xslt/forum.xsl"?>-->
 <forum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="forum.xsd">
-    <event id="3926c5a3-ffa1-4d90-8498-12fb65e86637">
-        <question id="1" name="foo" content="bar">
-            <answers qId="1" name="afoo" content="abar" />
-            <answers qId="1" name="afoo2" content="abar2" />
-        </question>
-        <question id="2" name="foofoo" content="barbar">
-            <answers qId="2" name="afoofoo" content="abarbar" />
-            <answers qId="2" name="afoofoo" content="abarbar" />
+
+
+    <event id="">
+        <question id="19356367005e5e20b064b541.39716770">
+            <firstName>josh</firstName>
+            <content>Funktionier das wirklich?</content>
         </question>
     </event>
-
+    <event id="">
+        <question id="20096900485e5e3528b2bec1.49514215">
+            <firstName>josh</firstName>
+            <content>Esch das en super Event?</content>
+        </question>
+    </event>
 </forum>

@@ -1,9 +1,10 @@
  <?php
  error_reporting(E_ALL);
-if(isset($_POST['sendQuestion'])){
+if(isset($_POST['sendAnswer'])){
 #minus submit, fname, lname, eventid
 
 	$eventid = $_POST['eventid'];
+	$questionid = $_POST['questionid'];
 
 	$xml = '../../database/forum.xml';
 
@@ -29,20 +30,19 @@ if(isset($_POST['sendQuestion'])){
         $root_event = $dom->createElement('event');
         $root_event->setAttribute("id",$eventid);
     }
-    $uniqueId = uniqid(rand(),true);
+    foreach($dom->getElementsByTagName('question') as $question)
+        $question->setIdAttribute('id',true);
+    $question = $dom->getElementById($questionid);
 
-    $question = $dom->createElement("question");
-    $question->setAttribute("id",$uniqueId);
+    $answer = $dom->createElement("answer");
 
-    $firstNameEl = $dom->createElement("firstName", $_POST['firstName']);
-    $contentEl = $dom->createElement("content", $_POST['question']);
+    $firstNameEl = $dom->createElement("firstName", $_POST['firstNameA']);
+    $contentEl = $dom->createElement("content", $_POST['answer']);
 
-    $question->appendChild($firstNameEl);
-    $question->appendChild($contentEl);
+    $answer->appendChild($firstNameEl);
+    $answer->appendChild($contentEl);
 
-    $root_event->appendChild($question);
-
-    $root->appendChild($root_event);
+    $question->appendChild($answer);
 
 	$dom->save($xml);
 

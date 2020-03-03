@@ -1,5 +1,9 @@
  <?php
- error_reporting(E_ALL);
+ 
+include 'validateXml.php';
+
+error_reporting(E_ALL);
+
 if(isset($_POST['send'])){
 	$xml = '../../database/events.xml';
 	$dom = new DomDocument('1.0', 'UTF-8');
@@ -31,13 +35,22 @@ if(isset($_POST['send'])){
 		$newPerson->appendChild($newAttribute);
 		}
 	}
+	
+	//validateXml
+	$validator = new DomValidator;
+	$validated = false;
+	
+	$schema='../../database/events.xsd';
+	
 	$participants->appendChild($newPerson);
-	$dom->save($xml);
 	
-	//check wether the generated $xml is valid against person.xsd
-	
-	
-	echo "saved in xml";
+	try {
+		$validated = $validator->validateDomDocument($dom, $schema);
+		$dom->save($xml);
+		echo "saved in xml";
+	} catch (Exception $e) {
+		echo 'Exception abgefangen: ',  $e->getMessage(), "\n";
+	}	
 	
 } else {
 	echo "wrong form";

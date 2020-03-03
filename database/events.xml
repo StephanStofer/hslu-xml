@@ -3,44 +3,43 @@
 <events xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="events.xsd">
 	<event id="e8e6633f-be9f-4596-8369-e840a50a8be8" type="sport" price="20">
 		<name>Schwimmen / Aqua-Fitness</name>
-		<description>Der Schwimm und Aquafit Kurs besteht, wie schon der Name, aus zwei Teilen. Anfangen werden wir mit einem Warumup in der ganzen Gruppe. Hier werden wir während rund 40 Minuten Übungen durchführen, die der allgemeinen Beweglichkeit dienen und die Muskeln stimulieren
-		Im zweiten Teil können Sie während 90 Minuten unter Aufsicht und Betreuung Strecken schwimmen.
-			Selbstverständlich können Sie bei einer Anmeldung auch nur einen Teil des Kurses besuchen.
+		<description>Der Schwimm und Aquafit Kurs besteht, wie schon der Name, aus zwei Teilen. Anfangen werden wir mit einem Warumup in der ganzen Gruppe. Hier werden wir w&#xE4;hrend rund 40 Minuten &#xDC;bungen durchf&#xFC;hren, die der allgemeinen Beweglichkeit dienen und die Muskeln stimulieren
+		Im zweiten Teil k&#xF6;nnen Sie w&#xE4;hrend 90 Minuten unter Aufsicht und Betreuung Strecken schwimmen.
+			Selbstverst&#xE4;ndlich k&#xF6;nnen Sie bei einer Anmeldung auch nur einen Teil des Kurses besuchen.
 		</description>
 		<participants>
-			<person id="myuniqueId" firstName="Hans" lastName="Meier" address="Bahnhofstrasse 10" postCode="6005" city="Luzern" email="hans.meier@gmx.net" phone="+41412601549"/>
-		</participants>
+		<person id="5e5e339ada9c6" firstName="Maurizio" lastName="Hostettler" address="Gr&#xFC;nerweg 5" city="Bern" postCode="3013" email="maurizio.hostettler@gmail.com" phone="+41795406870" op1="selected" op3="selected"/><person id="5e5e34c28241f" firstName="Maurizio" lastName="Hostettler" address="Gr&#xFC;nerweg 5" city="Bern" postCode="3013" email="maurizio.hostettler@gmail.com" phone="+41795406870" op1="selected" op3="selected"/></participants>
 		<additionalServices>
 			<service title="Schwimmhilfe" price="15" id="1"/>
 			<service title="Betreuung" price="80" id="2"/>
 			<service title="Flossen" price="20" id="3"/>
 		</additionalServices>
 		<settings>
-			<image path="frontend/img/schwimmen.jpg" alt="Bild von Menschen mit Beeinträchtigung im Schwimmbecken."/>
+			<image path="frontend/img/schwimmen.jpg" alt="Bild von Menschen mit Beeintr&#xE4;chtigung im Schwimmbecken."/>
 		</settings>
 	</event>
 	<event id="3926c5a3-ffa1-4d90-8498-12fb65e86637" type="sport" price="140">
 		<name>Klettern</name>
-		<description>Unser Kletterkurs ist für Anfänger und geübte gleichermassen geeignet. Zum Anfang wird eine Grundschulung stattfinden die auch dazu dient die einzelnen Teilnehmer kennen zu lernen. Im Anschluss wird jeder Teilnehmer mit einem Leiter zusammen an der Kletterwand eine dem können entsprechende Route absolvieren können.
-				Bitte beachten sie die beschränkte Platzzahl. Durch die 1:1 Betreuung können leider nicht mehr Teilnehmer gleichzeitig am Kurs Teilnehmen.</description>
+		<description>Unser Kletterkurs ist f&#xFC;r Anf&#xE4;nger und ge&#xFC;bte gleichermassen geeignet. Zum Anfang wird eine Grundschulung stattfinden die auch dazu dient die einzelnen Teilnehmer kennen zu lernen. Im Anschluss wird jeder Teilnehmer mit einem Leiter zusammen an der Kletterwand eine dem k&#xF6;nnen entsprechende Route absolvieren k&#xF6;nnen.
+				Bitte beachten sie die beschr&#xE4;nkte Platzzahl. Durch die 1:1 Betreuung k&#xF6;nnen leider nicht mehr Teilnehmer gleichzeitig am Kurs Teilnehmen.</description>
 		<participants/>
 		<additionalServices>
 			<service title="Kletterschuhe" price="15" id="1"/>
 		</additionalServices>
 		<settings>
-			<image path="frontend/img/klettern.jpg" alt="Bild von Menschen mit Beeinträchtigung die am Klettern sind."/>
+			<image path="frontend/img/klettern.jpg" alt="Bild von Menschen mit Beeintr&#xE4;chtigung die am Klettern sind."/>
 		</settings>
 	</event>
 	<event id="4d7f7f7e-77bd-4601-b569-08210abc0c85" type="sport" price="80">
 		<name>Tennis</name>
-		<description>Fünf unserer Aussenplätze sind für die hier angebotenen Kurse reserviert. Bei schlechtem Wetter können Kurse ebenfalls in der Halle angeboten werden.</description>
+		<description>F&#xFC;nf unserer Aussenpl&#xE4;tze sind f&#xFC;r die hier angebotenen Kurse reserviert. Bei schlechtem Wetter k&#xF6;nnen Kurse ebenfalls in der Halle angeboten werden.</description>
 		<participants/>
 		<additionalServices>
 			<service title="Trainer" price="60" id="1"/>
 			<service title="Balljunge" price="30" id="2"/>
 		</additionalServices>
 		<settings>
-			<image path="frontend/img/tennis.jpg" alt="Bild von Menschen mit Beeinträchtigung Tennis spielen."/>
+			<image path="frontend/img/tennis.jpg" alt="Bild von Menschen mit Beeintr&#xE4;chtigung Tennis spielen."/>
 		</settings>
 	</event>
 </events>

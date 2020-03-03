@@ -1,38 +1,13 @@
  <?php
  
- /*
-
-USAGE like in the example below
-
-$xml='db.xml';
-$schema='db.xsd';
-
-$validator = new DomValidator;
-$validated = false;
-
-try {
-	$validated = $validator->validateXml($xml, $schema);
-} catch (Exception $e) {
-    echo 'Exception abgefangen: ',  $e->getMessage(), "\n";
-}
-
-
-if ($validated) {
-  echo "xml successfully validated";
-} else {
-	echo "something went wrong";
-	//display error
-  print_r($validator->displayErrors());
-}
-  
- */
-  
+ // USAGE:
+ // validateDomDocument($xmlDomDocument, $schemaFilePath)
+ // validateXmlFile($xmlFilePath, $schemaFilePath)
  
  /**
   * Validator Source https://www.codementor.io/@sirolad/validating-xml-against-xsd-in-php-6f56rwcds
-  * Code changed by mau in order to provide xml and schema without hardcoded paths
-  */
- 
+  * Code changed by mau in order to provide xmlFile and xmlDocument validation without hardcoded paths
+  */ 
 class DOMValidator
 {
     public $feedErrors = 0;
@@ -40,8 +15,6 @@ class DOMValidator
 	
     /**
      * Validation Class constructor Instantiating DOMDocument
-     *
-     * @param \DOMDocument $handler [description]
      */
     public function __construct()
     {
@@ -50,7 +23,6 @@ class DOMValidator
 	
     /**
      * @param \libXMLError object $error
-     *
      * @return string
      */
     private function libxmlDisplayError($error)
@@ -75,7 +47,7 @@ class DOMValidator
     }
 	
     /**
-     * Validate Incoming Feeds against Listing Schema
+     * Validate DomDocument against Schema
      *
      * @param resource $xmlDomDocument
      * @param resource $schemaFilePath
@@ -104,7 +76,7 @@ class DOMValidator
         }
     }
 	    /**
-     * Validate Incoming Feeds against Listing Schema
+     * Validate XML File against Schema
      *
      * @param resource $xmlFilePath
      * @param resource $schemaFilePath
@@ -135,14 +107,13 @@ class DOMValidator
            $this->errorDetails = $this->libxmlDisplayErrors();
            $this->feedErrors   = 1;
         } else {
-          //The file is valid
-           return true;
+		   //The file is valid
+		   return true;
         }
     }
 	
     /**
      * Display Error if Resource is not validated
-     *
      * @return array
      */
     public function displayErrors()

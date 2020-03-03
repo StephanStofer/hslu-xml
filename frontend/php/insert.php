@@ -2,6 +2,7 @@
  
 include 'validateXml.php';
 
+//TODO kill error reporting for final version
 error_reporting(E_ALL);
 
 if(isset($_POST['send'])){
@@ -12,45 +13,51 @@ if(isset($_POST['send'])){
 	// define id attributes - needed to actually add attributes
 	foreach($dom->getElementsByTagName('event') as $event)
 		$event->setIdAttribute('id',true);
- 
+	
 	$eventid = $_POST['eventid'];
- 
-	$event_root = $dom->getElementById($eventid);
+ 	$event_root = $dom->getElementById($eventid);
 	$participants = $event_root->getElementsByTagName('participants')->item(0);
+	
+	//TODO Count participants and check wether maximum reached...
 	
 	$newPerson = $dom->createElement("person");
 	
-	//Unique registration ID
+	//Create unique registration ID
 	$regId = uniqid();
 	$newAttribute = $dom->createAttribute("id");
 	$newAttribute->value=($regId);
 	$newPerson->appendChild($newAttribute);
 	
-	//Add every Post item as attribute exept those in the array :-)
+	//Add every post item as attribute exept those in the array
 	foreach($_POST AS $key => $value) {
 		if (!in_array($key, array("eventid", "send"))){
-			echo $key," : ", $value, "<br/>";
 		$newAttribute = $dom->createAttribute($key);
 		$newAttribute->value=($value);
 		$newPerson->appendChild($newAttribute);
 		}
 	}
 	
-	//validateXml
+	$participants->appendChild($newPerson);
+
+	// Validation of new Dom Document
 	$validator = new DomValidator;
 	$validated = false;
-	
-	$schema='../../database/events.xsd';
-	
-	$participants->appendChild($newPerson);
+	$schemaLocation='../../database/events.xsd';
 	
 	try {
-		$validated = $validator->validateDomDocument($dom, $schema);
-		$dom->save($xml);
-		echo "saved in xml";
+		$validated = $validator->validateDomDocument($dom, $schemaLocation);
 	} catch (Exception $e) {
 		echo 'Exception abgefangen: ',  $e->getMessage(), "\n";
 	}	
+	
+	if ($validated) {
+		$dom->save($xml);
+		//TODO instead of Echo -> confirmation page with FO Document download
+		echo "saved in xml";
+	} else {
+		//TODO instead of Print errors -> errorpage with a hint on what input to improve :)
+		print_r($validator->displayErrors());
+	}
 	
 } else {
 	echo "wrong form";

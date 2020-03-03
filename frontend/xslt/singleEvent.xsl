@@ -15,7 +15,7 @@
 				</h2>
 			</div>
 			<div class="card-body">
-				<img style="float:left;border: 1px solid #ddd; border-radius: 4px;  padding: 5px;  max-width: 42%;  height: auto;margin-right:20px">
+				<img style="border: 1px solid #ddd; border-radius: 4px;  padding: 5px;  max-width: 600px;  height: auto ;display: block; margin-left: auto;  margin-right: auto;">
 					<xsl:attribute name="src">
 						<xsl:value-of select="settings/image/@path"/>
 					</xsl:attribute>
@@ -26,9 +26,12 @@
 						<xsl:text>card-img-top</xsl:text>
 					</xsl:attribute>
 				</img>
+			</div>
+			<div class="card-body shadow p-3 mb-5 bg-white rounded" style="width:600px;margin:0 auto">
 				<p align="left">
 					<xsl:value-of select="description"/>
 				</p>
+
 				<ul class="list-unstyled mt-3 mb-4">
 					<li>
 						<xsl:value-of select="name"/>
@@ -37,35 +40,40 @@
 				<a  class="btn btn-outline-primary" href="forum.php?eventid={@id}">Forum</a>
 				<br/>
 				<br/>
+
 			</div>
 			<div style="width:600px;margin:0 auto" class="shadow p-3 mb-5 bg-white rounded"> 
-				<form class="container" action="frontend/php/insert.php" method="POST" accept-charset="UTF-8">
+
+				<!-- xsl if max teilnehmer erreicht -> Meldung anzeigen (Fixtext)
+			     xsl if max teilnehmer NICHT erreicht .> Form anzeigen -->
+
+				<form action="frontend/php/insert.php" method="POST" accept-charset="UTF-8" class="needs-validation container">
 					<input type="hidden" name="eventid" value="{$eventid}"/>
 					<div class="form-row" >
 						<div class="form-group col-md-6">
-							<input type="text" class="form-control" id="firstName" name="firstName" placeholder="Vorname"/>
+							<input type="text" class="form-control" id="firstName" name="firstName" placeholder="Vorname" required="true"/>
 						</div>
 						<div class="form-group col-md-6">
-							<input type="text" class="form-control" id="lastName" name="lastName" placeholder="Nachname"/>
+							<input type="text" class="form-control" id="lastName" name="lastName" placeholder="Nachname" required="true"/>
 						</div>
 					</div>
 					<div class="form-row">
 						<div class="form-group col-md-6">
-							<input type="text" class="form-control" id="address" name="address" placeholder="Strasse"/>
+							<input type="text" class="form-control" id="address" name="address" placeholder="Strasse" required="true"/>
 						</div>
 						<div class="form-group col-md-4">
-							<input type="text" class="form-control" id="city" name="city" placeholder="Ort"/>
+							<input type="text" class="form-control" id="city" name="city" placeholder="Ort" required="true"/>
 						</div>
 						<div class="form-group col-md-2">
-							<input type="text" class="form-control" id="postCode" name="postCode" placeholder="PLZ"/>
+							<input type="text" class="form-control" id="postCode" name="postCode" placeholder="PLZ" required="true"/>
 						</div>
 					</div>
 					<div class="form-row" >
 						<div class="form-group col-md-6">
-							<input type="email" class="form-control" id="email" name="email" placeholder="E-Mail"/>
+							<input type="email" class="form-control" id="email" name="email" placeholder="E-Mail" required="true"/>
 						</div>
 						<div class="form-group col-md-6">
-							<input type="tel" class="form-control" id="phone" name="phone" placeholder="Telefon"/>
+							<input type="tel" class="form-control" id="phone" name="phone" placeholder="Telefon" required="true"/>
 						</div>
 					</div>
 					<div class="container">Optionen:</div>
@@ -73,14 +81,15 @@
 						<xsl:for-each select="additionalServices/service">
 
 							<div class="form-check">
-								<input class="form-check-input" type="checkbox" name="service_{@id}" value="selected"/>
+								<input class="form-check-input" type="checkbox" name="op{@id}" value="selected"/>
 								<label for="service_{@id}">
 									<xsl:value-of select="@title"/>: Kosten <xsl:value-of select="@price"/>.-</label>
 							</div>
-
 						</xsl:for-each>
 					</div>
 					<button type="submit" name ="send" value="submit" class="btn btn-primary" >Anmelden</button>
+					<button type="button" class="btn btn-primary" alt="Forum">Forum</button>
+				<br/>
 				</form>
 			</div>			
 		</div>

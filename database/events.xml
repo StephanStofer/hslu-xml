@@ -8,10 +8,8 @@
 			Selbstverst&#xE4;ndlich k&#xF6;nnen Sie bei einer Anmeldung auch nur einen Teil des Kurses besuchen.
 		</description>
 		<participants>
-			<person firstName="Hans" lastName="Meier" address="Bahnhofstrasse 10" postCode="6005" city="Luzern" email="hans.meier@gmx.net" phone="+41412601549">
-				<service title="Schwimmhilfe" price="15" id="1"/>
-			</person>
-		<person firstName="a" lastName="kl" address="kl" city="kl" postCode="" email="" phone=""/></participants>
+
+		<person id="5e5e339ada9c6" firstName="Maurizio" lastName="Hostettler" address="Gr&#xFC;nerweg 5" city="Bern" postCode="3013" email="maurizio.hostettler@gmail.com" phone="+41795406870" op1="selected" op3="selected"/><person id="5e5e34c28241f" firstName="Maurizio" lastName="Hostettler" address="Gr&#xFC;nerweg 5" city="Bern" postCode="3013" email="maurizio.hostettler@gmail.com" phone="+41795406870" op1="selected" op3="selected"/></participants>
 		<additionalServices>
 			<service title="Schwimmhilfe" price="15" id="1"/>
 			<service title="Betreuung" price="80" id="2"/>

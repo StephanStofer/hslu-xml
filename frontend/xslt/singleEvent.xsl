@@ -95,6 +95,7 @@
 				</xsl:for-each>
 			</div>
 			<button type="submit" name ="send" value="submit" class="btn btn-primary" >Anmelden</button>
+			<button type="button" class="btn btn-primary" alt="Forum">Forum</button>
 		</form>
 	</xsl:template>
 </xsl:stylesheet>

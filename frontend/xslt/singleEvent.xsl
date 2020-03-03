@@ -31,6 +31,16 @@
 				<p align="left">
 					<xsl:value-of select="description"/>
 				</p>
+
+				<ul class="list-unstyled mt-3 mb-4">
+					<li>
+						<xsl:value-of select="name"/>
+					</li>
+				</ul>
+				<a  class="btn btn-outline-primary" href="forum.php?eventid={@id}">Forum</a>
+				<br/>
+				<br/>
+
 			</div>
 			<div style="width:600px;margin:0 auto" class="shadow p-3 mb-5 bg-white rounded"> 
 

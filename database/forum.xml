@@ -1,30 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<forum>
-    <posts>
-        <post isQuestion="true" id="1">
-            <eventId>1</eventId>
-            <name>foo</name>
-            <content>bar</content>
-        </post>
-        <post isQuestion="false" qId="1" id="1">
-            <eventId>1</eventId>
-            <name>answer1</name>
-            <content>answercontent1</content>
-        </post>
-        <post isQuestion="true" id="2">
-            <eventId>1</eventId>
-            <name>foo2</name>
-            <content>bar2</content>
-        </post>
-        <post isQuestion="false" qId="1" id="1">
-            <eventId>1</eventId>
-            <name>answer2</name>
-            <content>answercontent2</content>
-        </post>
-        <post isQuestion="false" qId="2" id="1">
-            <eventId>1</eventId>
-            <name>answersecond</name>
-            <content>answercontentsecond</content>
-        </post>
-    </posts>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--<?xml-stylesheet type="text/xsl" href="../frontend/xslt/forum.xsl"?>-->
+<forum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="forum.xsd">
+
+
+    <event id="">
+        <question id="19356367005e5e20b064b541.39716770">
+            <firstName>josh</firstName>
+            <content>Funktionier das wirklich?</content>
+        </question>
+    </event>
+    <event id="">
+        <question id="20096900485e5e3528b2bec1.49514215">
+            <firstName>josh</firstName>
+            <content>Esch das en super Event?</content>
+        </question>
+    </event>
 </forum>

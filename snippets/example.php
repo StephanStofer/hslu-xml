@@ -1,7 +1,7 @@
 <?php
 
 // load the FOP client.
-require_once 'fop_service_client.php';
+require_once 'fop.php';
 
 // locate the source FO file.
 $foFile = 'bond.fo';

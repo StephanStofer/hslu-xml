@@ -48,6 +48,9 @@
                                 <span style="margin-left: 24px">
                                     <xsl:value-of select="firstName"/>
                                 </span>
+                                <span class="float-right">
+                                    <xsl:value-of select="time"/>
+                                </span>
                             </div>
                             <div align="left">
                                 Frage:
@@ -56,14 +59,30 @@
                                 </span>
                             </div>
                         </div>
-                        <div id="{@id}button" style="display: block">
-                            <button onclick="showAnswer('{@id}')" class="mt-2 btn btn-primary">Antworten</button>
-                        </div>
-                        <div id="{@id}" style="display: none">
-                            <div class="mt-3" id="{$questionid}answer">
-                                <xsl:for-each select="answer">
-                                    <xsl:sort select="position()" data-type="number" order="descending"/>
-                                    <div class="mt-1 ml-4 card px-2 py-2">
+                        <xsl:for-each select="answer">
+                            <xsl:sort select="position()" data-type="number" order="descending"/>
+                            <xsl:if test="position() = 1">
+                                <div class="mt-1 ml-4 card px-2 py-2 ">
+                                    <div align="left" class="border-bottom">
+                                        Von:
+                                        <span style="margin-left: 40px">
+                                            <xsl:value-of select="firstName"/>
+                                        </span>
+                                        <span class="float-right">
+                                            <xsl:value-of select="time"/>
+                                        </span>
+                                    </div>
+                                    <div align="left">
+                                        Antwort:
+                                        <span style="margin-left: 10px">
+                                            <xsl:value-of select="content"/>
+                                        </span>
+                                    </div>
+                                </div>
+                            </xsl:if>
+                            <xsl:if test="position() > 1">
+                                <div class="{$questionid}" style="display: none">
+                                    <div class="mt-1 ml-4 card px-2 py-2 ">
                                         <div align="left" class="border-bottom">
                                             Von:
                                             <span style="margin-left: 40px">
@@ -77,9 +96,11 @@
                                             </span>
                                         </div>
                                     </div>
-                                </xsl:for-each>
-                            </div>
-                            <div class="mt-4 ">
+                                </div>
+                            </xsl:if>
+                        </xsl:for-each>
+                        <div class="{@id}" style="display: none">
+                            <div class="mt-4" >
                                 <form class="form needs-validation " action="frontend/php/insertAnswer.php"
                                       method="POST"
                                       accept-charset="UTF-8">
@@ -88,13 +109,13 @@
                                     <div class="form-row justify-content-center">
                                         <div class="form-group col-md-10">
                                             <input type="text" class="form-control" id="firstNameA" name="firstNameA"
-                                                   placeholder="Vorname"
+                                                   placeholder="Vorname" maxlength="20"
                                                    required="true"/>
                                         </div>
                                     </div>
                                     <div class="form-row justify-content-center">
                                         <div class="form-group col-md-10">
-                                            <textarea class="form-control" id="answer" name="answer"
+                                            <textarea class="form-control" id="answer" name="answer" maxlength="200"
                                                       placeholder="Antwort"
                                                       required="true"/>
                                         </div>
@@ -107,6 +128,9 @@
                                 </form>
                             </div>
                         </div>
+                        <div id="{$questionid}button" style="display: block">
+                            <button onclick="showAnswer('{@id}')" class="mt-2 btn btn-primary">Alle Antworten</button>
+                        </div>
                     </div>
                 </div>
             </xsl:for-each>
@@ -118,14 +142,14 @@
                         <input type="hidden" name="eventid" value="{$eventid}"/>
                         <div class="form-row justify-content-center">
                             <div class="form-group col-md-10">
-                                <input type="text" class="form-control" id="firstName" name="firstName"
+                                <input type="text" class="form-control" maxlength="20" id="firstName" name="firstName"
                                        placeholder="Vorname"
                                        required="true"/>
                             </div>
                         </div>
                         <div class="form-row justify-content-center">
                             <div class="form-group col-md-10">
-                                <textarea class="form-control" id="question" name="question" placeholder="Frage"
+                                <textarea class="form-control" maxlength="200" id="question" name="question" placeholder="Frage"
                                           required="true"/>
                             </div>
                         </div>

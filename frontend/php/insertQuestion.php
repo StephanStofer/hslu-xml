@@ -1,5 +1,6 @@
  <?php
  error_reporting(E_ALL);
+ include 'validateXml.php';
 if(isset($_POST['sendQuestion'])){
 #minus submit, fname, lname, eventid
 
@@ -30,25 +31,43 @@ if(isset($_POST['sendQuestion'])){
         $root_event->setAttribute("id",$eventid);
     }
     $uniqueId = uniqid(rand(),true);
+    $timestamp = date("Y-m-d");
 
     $question = $dom->createElement("question");
     $question->setAttribute("id",$uniqueId);
 
     $firstNameEl = $dom->createElement("firstName", $_POST['firstName']);
     $contentEl = $dom->createElement("content", $_POST['question']);
+    $timestampEl = $dom->createElement("time", $timestamp);
 
     $question->appendChild($firstNameEl);
     $question->appendChild($contentEl);
+    $question->appendChild($timestampEl);
 
     $root_event->appendChild($question);
 
     $root->appendChild($root_event);
 
-	$dom->save($xml);
+    // Validation of new Dom Document
+    $validator = new DomValidator;
+    $validated = false;
+    $schemaLocation='../../database/forum.xsd';
 
-	header("Location:../../forum.php?eventid={$eventid}");
-	echo "saved in xml";
-	
+    try {
+        $validated = $validator->validateDomDocument($dom, $schemaLocation);
+    } catch (Exception $e) {
+        echo 'Exception abgefangen: ',  $e->getMessage(), "\n";
+    }
+
+    if ($validated) {
+        $dom->save($xml);
+        header("Location:../../forum.php?eventid={$eventid}");
+    } else {
+        echo print_r($validator->displayErrors());
+    }
+
+
+
 } else {
 	echo "wrong form";
 }

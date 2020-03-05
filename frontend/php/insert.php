@@ -59,19 +59,22 @@ if (isset($_POST['send'])) {
 
         $dom->save($xml);
 
-        echo "<script>console.log('dom saved: " . $dom . "' );</script>";
-        $foData = generateFoFile('../../database/events.xml', '../xslt/pdf.xsl', $regId);
-        echo "<script>console.log('generate fo: " . $foData . "' );</script>";
+        $xmlPath = 'bond_movies_extended.xml';
+        $xslPath = 'pricelist.xsl';
+        /*$xmlPath = '../../database/bond_movies_extended.xml';
+        $xslPath = '../xslt/pricelist.xsl';*/
+
+        $foData = generateFoFile($xmlPath, $xslPath, $regId);
+        echo "<script>console.log('generate fo: " . print_r($foData) . "');</script>";
 
         // create an instance of the FOP client and perform service request.
         $serviceClient = new FOPServiceClient();
         $pdfFile = $serviceClient->processData($foData, tempnam(sys_get_temp_dir(), 'confirmation.') . '.pdf');
+//        $pdfFile = $serviceClient->processFile('../../database/order.fo');
 
-        return sprintf('Generated Confirmation PDF: <strong><a href="%s">download PDF</a></strong>', $pdfFile);
-
-        /*echo '<h1>Herzlichen Dank für Ihre Anmeldung</h1>';
-        echo sprintf('<p>Ihre Bestellung ist bei uns eingegangen.<br><strong><a href="%s">%s</a></strong></p>', $foFile, $foFile);
-        echo sprintf('<p>Bestellbestätigung:<br><strong><a href="%s">download PDF</a></strong></p>', $pdfFile);*/
+        echo '<h1>Herzlichen Dank für Ihre Anmeldung</h1>';
+        echo sprintf('<p>Ihre Bestellung ist bei uns eingegangen.<br></p>');
+        echo sprintf('<p>Bestellbestätigung:<br><strong><a href="%s">download PDF</a></strong></p>', $pdfFile);
     } else {
         //TODO instead of Print errors -> errorpage with a hint on what input to improve :)
         print_r($validator->displayErrors());

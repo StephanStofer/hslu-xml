@@ -10,12 +10,8 @@
             Selbstverst&#xE4;ndlich k&#xF6;nnen Sie bei einer Anmeldung auch nur einen Teil des Kurses besuchen.
         </description>
         <participants>
-            <person id="5e5e339ada9c6" firstName="Maurizio" lastName="Hostettler" address="Gr&#xFC;nerweg 5" city="Bern"
-                    postCode="3013" email="maurizio.hostettler@gmail.com" phone="+41795406870" op1="selected"
-                    op3="selected"/>
-            <person id="5e5eb196502df" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort"
-                    postCode="3333" email="xml@xslt.xd" phone="0414444444" op1="selected" op2="selected"
-                    op3="selected"/>
+            <person id="5e5e339ada9c6" firstName="Maurizio" lastName="Hostettler" address="Gr&#xFC;nerweg 5" city="Bern" postCode="3013" email="maurizio.hostettler@gmail.com" phone="+41795406870" op1="selected" op3="selected"/>
+            <person id="5e5eb196502df" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="0414444444" op1="selected" op2="selected" op3="selected"/>
         </participants>
         <additionalServices>
             <service title="Schwimmhilfe" price="15" id="1"/>
@@ -23,8 +19,7 @@
             <service title="Flossen" price="20" id="3"/>
         </additionalServices>
         <settings>
-            <image path="frontend/img/schwimmen.jpg"
-                   alt="Bild von Menschen mit Beeintr&#xE4;chtigung im Schwimmbecken."/>
+            <image path="frontend/img/schwimmen.jpg" alt="Bild von Menschen mit Beeintr&#xE4;chtigung im Schwimmbecken."/>
         </settings>
     </event>
     <event id="3926c5a3-ffa1-4d90-8498-12fb65e86637" type="sport" price="140">
@@ -37,17 +32,80 @@
             Teilnehmer gleichzeitig am Kurs Teilnehmen.
         </description>
         <participants>
-            <person id="5e5ec031c1bd5" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort"
-                    postCode="3333" email="xml@xslt.xd" phone="414444444" op1="selected"/>
-            <person id="5e5ec0dc1d2c8" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort"
-                    postCode="3333" email="xml@xslt.xd" phone="414444444" op1="selected"/>
-        </participants>
+            <person id="5e5ec031c1bd5" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444" op1="selected"/>
+            <person id="5e5ec0dc1d2c8" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444" op1="selected"/>
+            <person id="5e5ff11c9592c" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ff14c737d7" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ff1a6f1048" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ff482a36ae" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ff6376b2b8" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ff63e8bbe8" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ff655a2040" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ff6be87899" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ff7af93ebd" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ff8072764a" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ff8295da91" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ff82da7af1" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffc0e42e75" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffc12d0d8a" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffcbe401df" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffcd54a075" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffd3f0f5a5" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffd687dfe7" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffd735e1d6" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffe2595340" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffe4ad6cf8" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffe591ac94" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffe78cf92d" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffe8060520" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffe8121cf0" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffe8537084" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffe8d4b835" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffe8e5ebe9" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffe8f0b57e" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffe8fa2e12" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffe9038326" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffe90c60a1" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffe916b0cb" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffeaa84491" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffeab74494" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffeac10401" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffeac4cd30" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffeac7b260" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffeacb1274" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffeaceb5af" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffeb585d90" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffeb64ef62" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffeb6e018e" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffeb775bfd" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffeb7efd76" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffeb8a5e3d" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5ffedc831f0" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5fff0b208ad" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5fff0f4ddf3" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5fff10450a5" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5fff26065ab" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5fff4757681" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5fffa9dfb18" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5fffaeb4e91" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5fffaf870bf" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5fffb045e77" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5fffb204eb4" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5fffb2bf913" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5fffb2eed45" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5fffb32fa76" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e5fffd062671" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e60007fec4c7" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e6000a6f1e8d" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e6000e921d3d" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e60013703ab8" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+            <person id="5e6001f6b719f" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
+        <person id="5e6002bf107c5" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/><person id="5e6002cb23a30" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/><person id="5e6002d7c5b41" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/><person id="5e6002f080ca2" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/><person id="5e60034c543f6" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/><person id="5e6003cb5773c" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/><person id="5e60b17679b8d" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/><person id="5e60b2f68af69" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/><person id="5e60b31a4ebe7" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/><person id="5e60b4bbd90c4" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/><person id="5e60b5e60419f" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/><person id="5e60b62763fd5" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/><person id="5e60b63c1033b" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/><person id="5e60b6e61d9d6" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/><person id="5e60b749d8679" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/><person id="5e60b7d606f8f" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/><person id="5e60b826cc10b" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/><person id="5e60b85a720a3" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/><person id="5e60b8a43ad42" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/><person id="5e60b9000ee0a" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/><person id="5e60b94423c51" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/><person id="5e60b981c72a9" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/><person id="5e610b8ede7ef" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/><person id="5e610bbb54081" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/></participants>
         <additionalServices>
             <service title="Kletterschuhe" price="15" id="1"/>
         </additionalServices>
         <settings>
-            <image path="frontend/img/klettern.jpg"
-                   alt="Bild von Menschen mit Beeintr&#xE4;chtigung die am Klettern sind."/>
+            <image path="frontend/img/klettern.jpg" alt="Bild von Menschen mit Beeintr&#xE4;chtigung die am Klettern sind."/>
         </settings>
     </event>
     <event id="4d7f7f7e-77bd-4601-b569-08210abc0c85" type="sport" price="80">
@@ -56,10 +114,8 @@
             schlechtem Wetter k&#xF6;nnen Kurse ebenfalls in der Halle angeboten werden.
         </description>
         <participants>
-            <person id="5e5ec107774f3" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort"
-                    postCode="3333" email="xml@xslt.xd" phone="414444444" op2="selected"/>
-            <person id="5e5ec11d33624" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort"
-                    postCode="3333" email="xml@xslt.xd" phone="414444444" op2="selected"/>
+            <person id="5e5ec107774f3" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444" op2="selected"/>
+            <person id="5e5ec11d33624" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444" op2="selected"/>
         </participants>
         <additionalServices>
             <service title="Trainer" price="60" id="1"/>

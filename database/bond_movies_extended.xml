@@ -1,0 +1,257 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="pricelist.xsl"?>
+<bond_movies month="August" year="2013">
+	<movie number="_01">
+		<title>Dr. No</title>
+		<bond>Sean Connery</bond>
+		<bond_girl>Ursula Andress</bond_girl>
+		<regie>Terence Young</regie>
+		<year>1962</year>
+		<duration>105</duration>
+		<isbn>4010232003874</isbn>
+		<price>6.80</price>
+		<poster href="poster/poster_01.jpg"/>
+	</movie>
+	<movie number="_02">
+		<title>From russia with love</title>
+		<bond>Sean Connery</bond>
+		<bond_girl>Daniela Bianchi</bond_girl>
+		<regie>Terence Young</regie>
+		<year>1963</year>
+		<duration>110</duration>
+		<isbn>4010232003881</isbn>
+		<price>6.80</price>
+		<poster href="poster/poster_02.jpg"/>
+	</movie>
+	<movie number="_03">
+		<title>Goldfinger</title>
+		<bond>Sean Connery</bond>
+		<bond_girl>Honor Blackman</bond_girl>
+		<regie>Guy Hamilton</regie>
+		<year>1964</year>
+		<duration>106</duration>
+		<isbn>4010232004710</isbn>
+		<price>6.80</price>
+		<poster href="poster/poster_03.jpg"/>
+	</movie>
+	<movie number="_04">
+		<title>Thunderball</title>
+		<bond>Sean Connery</bond>
+		<bond_girl>Claudine Auger</bond_girl>
+		<regie>Terence Young</regie>
+		<year>1965</year>
+		<duration>125</duration>
+		<isbn>4010232004727</isbn>
+		<price>6.80</price>
+		<poster href="poster/poster_04.jpg"/>
+	</movie>
+	<movie number="_05">
+		<title>You only live twice</title>
+		<bond>Sean Connery</bond>
+		<bond_girl>Mie Hama</bond_girl>
+		<regie>Lewis Gilbert</regie>
+		<year>1967</year>
+		<duration>112</duration>
+		<isbn>4010232005830</isbn>
+		<price>6.80</price>
+		<poster href="poster/poster_05.jpg"/>
+	</movie>
+	<movie number="_06">
+		<title>On her majesty's secret service</title>
+		<bond>George Lazenby</bond>
+		<bond_girl>Diana Rigg</bond_girl>
+		<regie>Peter R. Hunt</regie>
+		<year>1969</year>
+		<duration>136</duration>
+		<isbn>4010232005847</isbn>
+		<price>6.80</price>
+		<poster href="poster/poster_06.jpg"/>
+	</movie>
+	<movie number="_07">
+		<title>Diamonds are forever</title>
+		<bond>Sean Connery</bond>
+		<bond_girl>Jill St. John</bond_girl>
+		<regie>Guy Hamilton</regie>
+		<year>1971</year>
+		<duration>120</duration>
+		<isbn>4010232005915</isbn>
+		<price>6.80</price>
+		<poster href="poster/poster_07.jpg"/>
+	</movie>
+	<movie number="_08">
+		<title>Live and let die</title>
+		<bond>Roger Moore</bond>
+		<bond_girl>Jane Seymour</bond_girl>
+		<regie>Guy Hamilton</regie>
+		<year>1973</year>
+		<duration>116</duration>
+		<isbn>4010232005922</isbn>
+		<price>6.80</price>
+		<poster href="poster/poster_08.jpg"/>
+	</movie>
+	<movie number="_09">
+		<title>The man with the golden gun</title>
+		<bond>Roger Moore</bond>
+		<bond_girl>Britt Ekland</bond_girl>
+		<regie>Guy Hamilton</regie>
+		<year>1975</year>
+		<duration>120</duration>
+		<isbn>4010232005946</isbn>
+		<price>6.80</price>
+		<poster href="poster/poster_09.jpg"/>
+	</movie>
+	<movie number="_10">
+		<title>The spy who loved me</title>
+		<bond>Roger Moore</bond>
+		<bond_girl>Barbara Bach</bond_girl>
+		<regie>Lewis Gilbert</regie>
+		<year>1977</year>
+		<duration>120</duration>
+		<isbn>4010232005939</isbn>
+		<price>6.80</price>
+		<poster href="poster/poster_10.jpg"/>
+	</movie>
+	<movie number="_11">
+		<title>Moonraker</title>
+		<bond>Roger Moore</bond>
+		<bond_girl>Lois Chiles</bond_girl>
+		<regie>Lewis Gilbert</regie>
+		<year>1979</year>
+		<duration>122</duration>
+		<isbn>4010232006684</isbn>
+		<price>6.80</price>
+		<poster href="poster/poster_11.jpg"/>
+	</movie>
+	<movie number="_12">
+		<title>For your eyes only</title>
+		<bond>Roger Moore</bond>
+		<bond_girl>Carole Bouqet</bond_girl>
+		<regie>John Glen</regie>
+		<year>1981</year>
+		<duration>121</duration>
+		<isbn>4010232006691</isbn>
+		<price>6.80</price>
+		<poster href="poster/poster_12.jpg"/>
+	</movie>
+	<movie number="_13">
+		<title>Octopussy</title>
+		<bond>Roger Moore</bond>
+		<bond_girl>Maud Adams</bond_girl>
+		<regie>John Glen</regie>
+		<year>1983</year>
+		<duration>126</duration>
+		<isbn>4010232006929</isbn>
+		<price>6.80</price>
+		<poster href="poster/poster_13.jpg"/>
+	</movie>
+	<movie number="_14">
+		<title>A view to a kill</title>
+		<bond>Roger Moore</bond>
+		<bond_girl>Tanya Roberts</bond_girl>
+		<regie>John Glen</regie>
+		<year>1985</year>
+		<duration>125</duration>
+		<isbn>4010232006936</isbn>
+		<price>6.80</price>
+		<poster href="poster/poster_14.jpg"/>
+	</movie>
+	<movie number="_15">
+		<title>The living daylights</title>
+		<bond>Timothy Dalton</bond>
+		<bond_girl>Maryam d'Abo</bond_girl>
+		<regie>John Glen</regie>
+		<year>1987</year>
+		<duration>130</duration>
+		<isbn>4010232007148</isbn>
+		<price>6.80</price>
+		<poster href="poster/poster_15.jpg"/>
+	</movie>
+	<movie number="_16">
+		<title>Licence to kill</title>
+		<bond>Timothy Dalton</bond>
+		<bond_girl>Carey Lowell</bond_girl>
+		<regie>John Glen</regie>
+		<year>1989</year>
+		<duration>127</duration>
+		<isbn>4010232007155</isbn>
+		<price>6.80</price>
+		<poster href="poster/poster_16.jpg"/>
+	</movie>
+	<movie number="_17">
+		<title>Goldeneye</title>
+		<bond>Pierce Brosnan</bond>
+		<bond_girl>Izabella Scorupco</bond_girl>
+		<regie>Martin Campbell</regie>
+		<year>1995</year>
+		<duration>125</duration>
+		<isbn>4010232003393</isbn>
+		<price>6.80</price>
+		<poster href="poster/poster_17.jpg"/>
+	</movie>
+	<movie number="_18">
+		<title>Tomorrow never dies</title>
+		<bond>Pierce Brosnan</bond>
+		<bond_girl>Michelle Yeoh</bond_girl>
+		<regie>Roger Spottiswoode</regie>
+		<year>1997</year>
+		<duration>114</duration>
+		<isbn>4010232003386</isbn>
+		<price>6.80</price>
+		<poster href="poster/poster_18.jpg"/>
+	</movie>
+	<movie number="_19">
+		<title>The world is not enough</title>
+		<bond>Pierce Brosnan</bond>
+		<bond_girl>Denise Richards</bond_girl>
+		<regie>Michael Apted</regie>
+		<year>1999</year>
+		<duration>122</duration>
+		<isbn>4010232003867</isbn>
+		<price>6.80</price>
+		<poster href="poster/poster_19.jpg"/>
+	</movie>
+	<movie number="_20">
+		<title>Die another day</title>
+		<bond>Pierce Brosnan</bond>
+		<bond_girl>Halle Berry</bond_girl>
+		<regie>Lee Tamahori</regie>
+		<year>2002</year>
+		<duration>127</duration>
+		<isbn>4010232013705</isbn>
+		<price>10.30</price>
+		<poster href="poster/poster_20.jpg"/>
+	</movie>
+	<movie number="_21">
+		<title>Casino Royale</title>
+		<bond>Daniel Craig</bond>
+		<bond_girl>Eva Green</bond_girl>
+		<regie>Martin Campbell</regie>
+		<year>2006</year>
+		<duration>133</duration>
+		<isbn>4045167011823</isbn>
+		<price>10.30</price>		
+		<poster href="poster/poster_21.jpg"/>
+	</movie>
+  <movie number="_22">
+		<title>Quantum of Solace</title>
+		<bond>Daniel Craig</bond>
+		<bond_girl>Olga Kurylenko</bond_girl>
+		<regie>Marc Forster</regie>
+		<year>2008</year>
+		<duration>100</duration>
+		<isbn>4045167008229</isbn>
+		<price>12.90</price>		
+		<poster href="poster/poster_22.jpg"/>
+	</movie>
+  <movie number="_23">
+		<title>Skyfall</title>
+		<bond>Daniel Craig</bond>
+		<bond_girl>Bérénice Marlohe</bond_girl>
+		<regie>Sam Mendes</regie>
+		<year>2012</year>
+		<duration>132</duration>
+		<isbn>4045167012271</isbn>
+		<price>26.90</price>
+		<poster href="poster/poster_23.jpg"/>
+	</movie>
+</bond_movies>

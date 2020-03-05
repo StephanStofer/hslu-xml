@@ -6,7 +6,7 @@ require_once 'http_client.php';
  * A client to consume the FOP Service.
  * @author Roland Christen <roland.christen@hslu.ch>
  */
-class FOPServiceClient {
+class FOPServiceClientOrig {
 
     // service connection parameter
     const SERVER = 'https://fop.edu.abiz.ch';

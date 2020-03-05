@@ -33,6 +33,15 @@ class FOPServiceClient {
         return $link;
     }
 
+    public function processData($foData, $pdfFilePath) {
+        $pdfData = $this->renderFile($foData);
+        $this->writeFile($pdfData, $pdfFilePath);
+
+        $link = $this->createDownloadLink($pdfFilePath);
+        return $link;
+    }
+
+
     private function createDownloadLink($filePath) {
         $ret = pathinfo($filePath, PATHINFO_FILENAME);
         $ext = pathinfo($filePath, PATHINFO_EXTENSION);

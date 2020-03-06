@@ -26,7 +26,7 @@
 				Bitte beachten sie die beschr&#xE4;nkte Platzzahl. Durch die 1:1 Betreuung k&#xF6;nnen leider nicht mehr Teilnehmer gleichzeitig am Kurs Teilnehmen.</description>
 		<participants>
 			<person id="5e5ee34509c62" firstName="Maurizio" lastName="Hostettler" address="Gr&#xFC;nerweg 5" city="Bern" postCode="3134" email="maurizio.hostettler@gmail.com" phone="0975406870"/>
-		</participants>
+		<person id="5e6211f20dce8" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/></participants>
 		<additionalServices>
 			<service title="Kletterschuhe" price="15" id="1"/>
 		</additionalServices>

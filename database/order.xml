@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../frontend/xslt/order.xsl"?>
+<order xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="order.xsd">
+    <eventname></eventname>
+    <eventprice>2</eventprice>
+    <person>
+        <firstName></firstName>
+        <lastName></lastName>
+    </person>
+    <services>
+        <serviceTitle></serviceTitle>
+        <servicePrice></servicePrice>
+    </services>
+</order>

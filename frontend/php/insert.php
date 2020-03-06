@@ -59,10 +59,8 @@ if (isset($_POST['send'])) {
 
         $dom->save($xml);
 
-        $xmlPath = 'bond_movies_extended.xml';
-        $xslPath = 'pricelist.xsl';
-        /*$xmlPath = '../../database/bond_movies_extended.xml';
-        $xslPath = '../xslt/pricelist.xsl';*/
+        $xmlPath = '../../database/events.xml';
+        $xslPath = '../xslt/pdf.xsl';
 
         $foData = generateFoFile($xmlPath, $xslPath, $regId);
         echo "<script>console.log('generate fo: " . print_r($foData) . "');</script>";
@@ -70,7 +68,7 @@ if (isset($_POST['send'])) {
         // create an instance of the FOP client and perform service request.
         $serviceClient = new FOPServiceClient();
         $pdfFile = $serviceClient->processData($foData, tempnam(sys_get_temp_dir(), 'confirmation.') . '.pdf');
-//        $pdfFile = $serviceClient->processFile('../../database/order.fo');
+//        $pdfFile = $serviceClient->processData($foData, '../../database/order.pdf');
 
         echo '<h1>Herzlichen Dank für Ihre Anmeldung</h1>';
         echo sprintf('<p>Ihre Bestellung ist bei uns eingegangen.<br></p>');

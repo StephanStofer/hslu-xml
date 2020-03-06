@@ -1,8 +1,9 @@
 <?xml version="1.0" ?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:fo="http://www.w3.org/1999/XSL/Format">
+    <xsl:param name="eventid" select="default"/>
 
-    <xsl:template match="/">
+    <xsl:template match="events">
         <fo:root>
             <fo:layout-master-set>
                 <fo:simple-page-master master-name="order_confirmation" page-height="29.7cm" page-width="21cm"
@@ -26,18 +27,18 @@
                               padding-bottom="5pt">Bestellbestätigung
                     </fo:block><!-- For each event ...  -->
                     <xsl:apply-templates select="event"/>
-                    <!--<xsl:call-template name="event">
-                        <xsl:with-param name="personId" select="default"/>
-                    </xsl:call-template>-->
+<!--                    <xsl:call-template name="event">-->
+<!--                        <xsl:with-param name="personId" select="default"/>-->
+<!--                    </xsl:call-template>-->
                 </fo:flow>
             </fo:page-sequence>
         </fo:root>
     </xsl:template>
 
     <xsl:template match="event">
-        <!--<xsl:param name="personId"/>
-        <xsl:if test="participants/person[@id = $personId]">-->
-        <xsl:if test="participants/person">
+<!--        <xsl:param name="personId"/>-->
+        <xsl:if test="participants/person[@id = $personId]">
+<!--        <xsl:if test="participants/person">-->
             <fo:table space-after.optimum="20pt" width="13cm" font-size="11pt">
                 <fo:table-header background-color="#122334">
                     <fo:table-row>
@@ -61,8 +62,8 @@
                         </fo:table-cell>
                         <fo:table-cell>
                             <fo:block>
-                                <xsl:value-of select="sum(event/participants/person/service/@price)"/>
-                                <!--                                <xsl:value-of select="sum(event/participants/person[@id = $personId]/service/@price)"/>-->
+<!--                                <xsl:value-of select="sum(event/participants/person/service/@price)"/>-->
+                                                                <xsl:value-of select="sum(event/participants/person[@id = $personId]/service/@price)"/>
                             </fo:block>
                         </fo:table-cell>
                     </fo:table-row>
@@ -76,14 +77,14 @@
                         </fo:table-cell>
                         <fo:table-cell padding-top="8pt" number-columns-spanned="2" padding-bottom="10pt">
                             <fo:block>
-                                <xsl:value-of select="event/participants/person/service"/>
-<!--                                <xsl:value-of select="event/participants/person[@id = $personId]/service"/>-->
+<!--                                <xsl:value-of select="event/participants/person/service"/>-->
+                                <xsl:value-of select="event/participants/person[@id = $personId]/service"/>
                             </fo:block>
                         </fo:table-cell>
                         <fo:table-cell>
                             <fo:block>
-                                <xsl:value-of select="event/participants/person/service/@price"/>
-<!--                                <xsl:value-of select="event/participants/person[@id = $personId]/service/@price"/>-->
+<!--                                <xsl:value-of select="event/participants/person/service/@price"/>-->
+                                <xsl:value-of select="event/participants/person[@id = $personId]/service/@price"/>
                             </fo:block>
                         </fo:table-cell>
                     </fo:table-row>

@@ -27,28 +27,22 @@ function transformXmlId($xml_path, $xsl_path, $eventid)
     print($processor->transformToXml($xml));
 }
 
-function generateFoFile($xmlPath, $xslPath, $personId) {
-    echo "<script>console.log('Parameters: xmlPaht: " .$xmlPath . " xslPath: " . $xslPath . " personId: " .$personId."' );</script>";
+function generateFoFile($xmlPath, $xslPath, $personId)
+{
     $data = file_get_contents($xmlPath);
-//    echo "<script>console.log('Debug path " .$data."');</script>";
     $xml = new DOMDocument();
-    $xml->loadXML($xmlPath);
-    echo "<script>console.log('xml loaded' );</script>";
+    $xml->loadXML($data);
 
     $xsl = new DOMDocument();
     $xsl->load($xslPath);
-    echo "<script>console.log('xsl loaded' );</script>";
 
     $processor = new XSLTProcessor();
     $processor->importStylesheet($xsl);
-    echo "<script>console.log('xslt imported' );</script>";
 
-    //$processor->setParameter('', 'personId', 'test');
+    $processor->setParameter('', 'personId', $personId);
 
-    $dom = $processor->transformToDoc($xml);
-    echo "<script>console.log('foFile transformed' );</script>";
-    return $dom->save('../../database/order.fo');
-//    return $foFile->saveXML();
+    $foFile = $processor->transformToDoc($xml);
+    return $foFile->saveXML();
 }
 
 ?>

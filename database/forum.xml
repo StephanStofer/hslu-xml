@@ -3,16 +3,5 @@
 <forum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="forum.xsd">
 
 
-    <event id="">
-        <question id="19356367005e5e20b064b541.39716770">
-            <firstName>josh</firstName>
-            <content>Funktionier das wirklich?</content>
-        </question>
-    </event>
-    <event id="">
-        <question id="20096900485e5e3528b2bec1.49514215">
-            <firstName>josh</firstName>
-            <content>Esch das en super Event?</content>
-        </question>
-    </event>
+
 </forum>

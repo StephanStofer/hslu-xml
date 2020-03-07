@@ -32,7 +32,7 @@ function generateFoFile($xmlPath, $xslPath, $personId) {
     $data = file_get_contents($xmlPath);
 //    echo "<script>console.log('Debug path " .$data."');</script>";
     $xml = new DOMDocument();
-    $xml->loadXML($xmlPath);
+    $xml->loadXML($data);
     echo "<script>console.log('xml loaded' );</script>";
 
     $xsl = new DOMDocument();
@@ -43,11 +43,19 @@ function generateFoFile($xmlPath, $xslPath, $personId) {
     $processor->importStylesheet($xsl);
     echo "<script>console.log('xslt imported' );</script>";
 
-    //$processor->setParameter('', 'personId', 'test');
+    $processor->setParameter('', 'personId', 'test');
 
     $dom = $processor->transformToDoc($xml);
     echo "<script>console.log('foFile transformed' );</script>";
-    return $dom->save('../../database/order.fo');
+    if($dom->save("../../database/order.fo")){
+    	echo "<script>console.log('saved fo');</script>";
+	return '../..database/order.fo';
+    }else{
+    	echo "<script>console.log('failed fo save');</script>";
+	return '';
+    }
+
+    //return $dom->save('../../database/order.fo');
 //    return $foFile->saveXML();
 }
 

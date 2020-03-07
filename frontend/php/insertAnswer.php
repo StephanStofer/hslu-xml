@@ -7,7 +7,7 @@ if (isset($_POST['sendAnswer'])) {
     $eventid = $_POST['eventid'];
     $questionid = $_POST['questionid'];
 
-    $xml = '../../database/forum.xml';
+    $xml = 'http://xml.joshuart.ch/database/forum.xml';
 
     $dom = new DomDocument('1.0', 'UTF-8');
     $dom->load($xml);
@@ -52,7 +52,7 @@ if (isset($_POST['sendAnswer'])) {
     // Validation of new Dom Document
     $validator = new DomValidator;
     $validated = false;
-    $schemaLocation = '../../database/forum.xsd';
+    $schemaLocation = 'http://xml.joshuart.ch/database/forum.xsd';
 
     try {
         $validated = $validator->validateDomDocument($dom, $schemaLocation);
@@ -62,7 +62,7 @@ if (isset($_POST['sendAnswer'])) {
 
     if ($validated) {
         $dom->save($xml);
-        header("Location:../../forum.php?eventid={$eventid}");
+        header("Location:http://xml.joshuart.ch/forum.php?eventid={$eventid}");
     } else {
         echo print_r($validator->displayErrors());
     }

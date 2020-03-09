@@ -74,8 +74,8 @@ if(isset($_POST['send'])){
         echo sprintf('<p>Ihre Bestellung ist bei uns eingegangen.<br></p>');
         echo sprintf('<p>Bestellbestätigung:<br><strong><a href="%s" target="_blank">download PDF</a></strong></p>', $pdfPath);
     } else {
-        //TODO instead of Print errors -> errorpage with a hint on what input to improve :)
-        print_r($validator->displayErrors());
+        echo "<p>Die eingegebenen Daten können nicht verarbeitet werden. </br>Bitte füllen Sie Das Formular nochmals aus und kontrollieren Sie die Daten.</p>";
+		echo "<a href='../../singleevent.php?eventid=$eventid'>Zurück zum Event</a>";
     }
 
 } else {

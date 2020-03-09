@@ -61,7 +61,7 @@ if(isset($_POST['sendQuestion'])){
 
     if ($validated) {
         $dom->save($xml);
-        header("Location:../../forum.php?eventid={$eventid}");
+        header("Location:http://xml.joshuart.ch/forum.php?eventid={$eventid}");
     } else {
         echo print_r($validator->displayErrors());
     }

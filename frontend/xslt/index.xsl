@@ -8,9 +8,9 @@
 		<div class="container">
 			<div class="jumbotron jumbotron-fluid">
 				<div class="container">
-					<h1 class="display-4">Sportzentrum Willisau</h1>
+					<h1 class="display-4">Sportzentrum Wihlisau</h1>
 					<p class="lead">
-						<span>Das herrlich über dem Städtli Willisau gelegene Sportzentrum ist fast einmalig in seiner Art. Im Umkreis von nur 300 m präsentiert sich eine einzigartige Sport-Infrastruktur, welche sich hervorragend eignet für Kurse, Lager und Wettkämpfe. 9 Turnhallen, 5 Rasenfelder, Leichtathletik-Anlagen mit 400m-Bahn, 2 Hartplätze, 4 Beachfelder, Kraftraum, Gymnastikraum, Ringer- und Schwingerhallen, Hallenbad, Freibad, Finnenbahn, Vitaparcours, NordicWalking-Park, Bikegelände, Unterkünfte für 300 Personen, Küchen, Ess-, Theorie- und Aufenthaltsräume, Spielplätze lassen (fast) keine Wünsche offen.  <br/>
+						<span>Das herrlich über dem Städtli Wihlisau gelegene Sportzentrum ist fast einmalig in seiner Art. Im Umkreis von nur 300 m präsentiert sich eine einzigartige Sport-Infrastruktur, welche sich hervorragend eignet für Kurse, Lager und Wettkämpfe. 9 Turnhallen, 5 Rasenfelder, Leichtathletik-Anlagen mit 400m-Bahn, 2 Hartplätze, 4 Beachfelder, Kraftraum, Gymnastikraum, Ringer- und Schwingerhallen, Hallenbad, Freibad, Finnenbahn, Vitaparcours, NordicWalking-Park, Bikegelände, Unterkünfte für 300 Personen, Küchen, Ess-, Theorie- und Aufenthaltsräume, Spielplätze lassen (fast) keine Wünsche offen.  <br/>
                         Das freundliche, aufgestellte und dienstleistungsfreudige Sportzentrum-Team freut sich auf ihren Besuch.
 						</span>
 					</p>

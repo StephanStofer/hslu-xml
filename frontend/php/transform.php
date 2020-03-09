@@ -27,7 +27,7 @@ function transformXmlId($xml_path, $xsl_path, $eventid)
     print($processor->transformToXml($xml));
 }
 
-function generateFoFile($xmlPath, $xslPath, $personId)
+function generateFoFile($xmlPath, $xslPath, $eventId, $personId)
 {
     $data = file_get_contents($xmlPath);
     $xml = new DOMDocument();
@@ -39,10 +39,11 @@ function generateFoFile($xmlPath, $xslPath, $personId)
     $processor = new XSLTProcessor();
     $processor->importStylesheet($xsl);
 
+    $processor->setParameter('', 'eventId', $eventId);
     $processor->setParameter('', 'personId', $personId);
 
     $foFile = $processor->transformToDoc($xml);
-    return $foFile->saveXML();
+    return $foFile->save("../../database/order.fo");
 }
 
 ?>

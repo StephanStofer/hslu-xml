@@ -61,18 +61,18 @@ if(isset($_POST['send'])){
 
         $xmlPath = '../../database/events.xml';
         $xslPath = '../xslt/pdf.xsl';
+        $pdfPath = '../xhtml/order.pdf';
 
-        $foData = generateFoFile($xmlPath, $xslPath, $regId);
+        $foData = generateFoFile($xmlPath, $xslPath, $eventid,$regId);
         echo "<script>console.log('generate fo: " . print_r($foData) . "');</script>";
 
         // create an instance of the FOP client and perform service request.
         $serviceClient = new FOPServiceClient();
-        $pdfFile = $serviceClient->processData($foData, tempnam(sys_get_temp_dir(), 'confirmation.') . '.pdf');
-//        $pdfFile = $serviceClient->processData($foData, '../../database/order.pdf');
+        $serviceClient->processFile('../../database/order.fo', $pdfPath);
 
         echo '<h1>Herzlichen Dank für Ihre Anmeldung</h1>';
         echo sprintf('<p>Ihre Bestellung ist bei uns eingegangen.<br></p>');
-        echo sprintf('<p>Bestellbestätigung:<br><strong><a href="%s">download PDF</a></strong></p>', $pdfFile);
+        echo sprintf('<p>Bestellbestätigung:<br><strong><a href="%s" target="_blank">download PDF</a></strong></p>', $pdfPath);
     } else {
         //TODO instead of Print errors -> errorpage with a hint on what input to improve :)
         print_r($validator->displayErrors());

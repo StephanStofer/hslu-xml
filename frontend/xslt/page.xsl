@@ -42,7 +42,7 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="index.php">Sportzentrum Willisau</a>
+            <a class="navbar-brand" href="index.php">Sportzentrum Wihlisau</a>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
@@ -80,11 +80,11 @@
                             <i class="fas fa-map-marked-alt fa-3x mb-3"></i>
                             <h3 class="mb-4">Standort</h3>
                             <address>
-                                Sportzentrum Willisau
+                                Sportzentrum Wihlisau
                                 <br />
                                 Schlossfeldstrasse 10
                                 <br />
-                                6130 Willisau
+                                6130 Wihlisau
                             </address>
                         </div>
                     </div>
@@ -94,7 +94,7 @@
                             <h3 class="mb-4">Kontakt</h3>
                             Tel: +41 41 970 12 12
                             <br />
-                            E-Mail: info@sportzentrum-willisau.ch
+                            E-Mail: info@sportzentrum-wihlisau.ch
                         </div>
                     </div>
                 </div>

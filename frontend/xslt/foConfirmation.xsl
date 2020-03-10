@@ -97,31 +97,31 @@
                                 </xsl:variable>
                                 <xsl:variable name="option1Price">
                                     <xsl:choose>
-                                        <xsl:when test="participants/person[@id=$personId]/@op1">
+                                        <xsl:when test="participants/person[@id=$personId and @op1='selected']">
                                             <xsl:value-of select="additionalServices/service[@id='1']/@price"/>
                                         </xsl:when>
                                         <xsl:otherwise>
-                                            <xsl:number>0</xsl:number>
+                                            0
                                         </xsl:otherwise>
                                     </xsl:choose>
                                 </xsl:variable>
                                 <xsl:variable name="option2Price">
                                     <xsl:choose>
-                                        <xsl:when test="participants/person[@id=$personId]/@op2">
+                                        <xsl:when test="participants/person[@id=$personId and @op2='selected']">
                                             <xsl:value-of select="additionalServices/service[@id='2']/@price"/>
                                         </xsl:when>
                                         <xsl:otherwise>
-                                            <xsl:number>0</xsl:number>
+                                           0
                                         </xsl:otherwise>
                                     </xsl:choose>
                                 </xsl:variable>
                                 <xsl:variable name="option3Price">
                                     <xsl:choose>
-                                        <xsl:when test="participants/person[@id=$personId]/@op3">
+                                        <xsl:when test="participants/person[@id=$personId and @op3='selected']">
                                             <xsl:value-of select="additionalServices/service[@id='3']/@price"/>
                                         </xsl:when>
                                         <xsl:otherwise>
-                                            <xsl:number>0</xsl:number>
+                                            0
                                         </xsl:otherwise>
                                     </xsl:choose>
                                 </xsl:variable>

@@ -62,7 +62,7 @@ if (isset($_POST['sendAnswer'])) {
 
     if ($validated) {
         $dom->save($xml);
-        header("Location:http://xml.joshuart.ch/forum.php?eventid={$eventid}");
+        header("Location:/forum.php?eventid={$eventid}");
     } else {
         echo print_r($validator->displayErrors());
     }

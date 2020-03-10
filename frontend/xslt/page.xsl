@@ -14,6 +14,13 @@
                 </header>
                 <main>
                     <div class="container">
+                        <div class="alert alert-danger">
+                            <p class="text-danger text-center">
+                                BITTE BEACHTEN!
+                                <br />
+                                Dies ist eine Studienarbeit. Die Angebote auf dieser Webseite sind weder echt noch können sie gebucht werden.
+                            </p>
+                        </div>
                         <xsl:apply-templates select="/*" />
                     </div>
                     <xsl:call-template name="footer" />

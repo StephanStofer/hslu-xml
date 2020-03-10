@@ -42,10 +42,6 @@
 
                     </fo:block>
                     <xsl:apply-templates select="event[@id=$eventId]"/>
-                    <!--                    <xsl:apply-templates select="event"/>-->
-                    <!--<xsl:call-template name="event">
-                        <xsl:with-param name="personId" select="default"/>
-                    </xsl:call-template>-->
                 </fo:flow>
             </fo:page-sequence>
         </fo:root>
@@ -74,6 +70,7 @@
         <xsl:if test="participants/person[@id = $personId]">
             <fo:table space-before.optimum="20pt" space-after.optimum="20pt" font-size="11pt">
                 <fo:table-header border-style="solid" border-width="0.5pt" padding-top="2mm" margin="5mm"
+                                 font-weight="600"
                                  font-size="12pt">
                     <fo:table-row>
                         <fo:table-cell number-columns-spanned="3">
@@ -85,9 +82,9 @@
                     </fo:table-row>
                 </fo:table-header>
                 <fo:table-footer border-style="solid" border-width="0.5pt" padding-top="10mm" margin="5mm"
-                                 font-style="bold"
+                                 font-weight="600"
                                  font-size="12pt">
-                    <fo:table-row>
+                    <fo:table-row padding-top="5mm">
                         <fo:table-cell number-columns-spanned="3">
                             <fo:block text-transform="uppercase">
                                 Total
@@ -95,7 +92,40 @@
                         </fo:table-cell>
                         <fo:table-cell>
                             <fo:block>
-                                <xsl:value-of select="sum(//event/@price)"/>
+                                <xsl:variable name="eventPrice">
+                                    <xsl:value-of select="//event[@id=$eventId]/@price"/>
+                                </xsl:variable>
+                                <xsl:variable name="option1Price">
+                                    <xsl:choose>
+                                        <xsl:when test="participants/person[@id=$personId]/@op1">
+                                            <xsl:value-of select="additionalServices/service[@id='1']/@price"/>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:number>0</xsl:number>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:variable>
+                                <xsl:variable name="option2Price">
+                                    <xsl:choose>
+                                        <xsl:when test="participants/person[@id=$personId]/@op2">
+                                            <xsl:value-of select="additionalServices/service[@id='2']/@price"/>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:number>0</xsl:number>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:variable>
+                                <xsl:variable name="option3Price">
+                                    <xsl:choose>
+                                        <xsl:when test="participants/person[@id=$personId]/@op3">
+                                            <xsl:value-of select="additionalServices/service[@id='3']/@price"/>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:number>0</xsl:number>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:variable>
+                                <xsl:value-of select="$eventPrice + $option1Price + $option2Price + $option3Price"/>
                             </fo:block>
                         </fo:table-cell>
                     </fo:table-row>
@@ -109,7 +139,7 @@
                         </fo:table-cell>
                         <fo:table-cell>
                             <fo:block>
-                                <xsl:value-of select="//event/@price"/>
+                                <xsl:value-of select="//event[@id=$eventId]/@price"/>
                             </fo:block>
                         </fo:table-cell>
                     </fo:table-row>
@@ -121,48 +151,48 @@
                                 </fo:block>
                             </fo:table-cell>
                         </fo:table-row>
-                    </xsl:if>
-                    <xsl:if test="participants/person[@id=$personId]/@op1">
-                        <fo:table-row>
-                            <fo:table-cell margin-left="15mm" number-columns-spanned="3">
-                                <fo:block>
-                                    <xsl:value-of select="additionalServices/service[@id='1']/@title"/>
-                                </fo:block>
-                            </fo:table-cell>
-                            <fo:table-cell>
-                                <fo:block>
-                                    <xsl:value-of select="additionalServices/service[@id='1']/@price"/>
-                                </fo:block>
-                            </fo:table-cell>
-                        </fo:table-row>
-                    </xsl:if>
-                    <xsl:if test="participants/person[@id=$personId]/@op2">
-                        <fo:table-row>
-                            <fo:table-cell margin-left="15mm" number-columns-spanned="3">
-                                <fo:block>
-                                    <xsl:value-of select="additionalServices/service[@id='2']/@title"/>
-                                </fo:block>
-                            </fo:table-cell>
-                            <fo:table-cell>
-                                <fo:block>
-                                    <xsl:value-of select="additionalServices/service[@id='2']/@price"/>
-                                </fo:block>
-                            </fo:table-cell>
-                        </fo:table-row>
-                    </xsl:if>
-                    <xsl:if test="participants/person[@id=$personId]/@op3">
-                        <fo:table-row>
-                            <fo:table-cell margin-left="15mm" number-columns-spanned="3">
-                                <fo:block>
-                                    <xsl:value-of select="additionalServices/service[@id='3']/@title"/>
-                                </fo:block>
-                            </fo:table-cell>
-                            <fo:table-cell>
-                                <fo:block>
-                                    <xsl:value-of select="additionalServices/service[@id='3']/@price"/>
-                                </fo:block>
-                            </fo:table-cell>
-                        </fo:table-row>
+                        <xsl:if test="participants/person[@id=$personId]/@op1">
+                            <fo:table-row>
+                                <fo:table-cell margin-left="15mm" number-columns-spanned="3">
+                                    <fo:block>
+                                        <xsl:value-of select="additionalServices/service[@id='1']/@title"/>
+                                    </fo:block>
+                                </fo:table-cell>
+                                <fo:table-cell>
+                                    <fo:block>
+                                        <xsl:value-of select="additionalServices/service[@id='1']/@price"/>
+                                    </fo:block>
+                                </fo:table-cell>
+                            </fo:table-row>
+                        </xsl:if>
+                        <xsl:if test="participants/person[@id=$personId]/@op2">
+                            <fo:table-row>
+                                <fo:table-cell margin-left="15mm" number-columns-spanned="3">
+                                    <fo:block>
+                                        <xsl:value-of select="additionalServices/service[@id='2']/@title"/>
+                                    </fo:block>
+                                </fo:table-cell>
+                                <fo:table-cell>
+                                    <fo:block>
+                                        <xsl:value-of select="additionalServices/service[@id='2']/@price"/>
+                                    </fo:block>
+                                </fo:table-cell>
+                            </fo:table-row>
+                        </xsl:if>
+                        <xsl:if test="participants/person[@id=$personId]/@op3">
+                            <fo:table-row>
+                                <fo:table-cell margin-left="15mm" number-columns-spanned="3">
+                                    <fo:block>
+                                        <xsl:value-of select="additionalServices/service[@id='3']/@title"/>
+                                    </fo:block>
+                                </fo:table-cell>
+                                <fo:table-cell>
+                                    <fo:block>
+                                        <xsl:value-of select="additionalServices/service[@id='3']/@price"/>
+                                    </fo:block>
+                                </fo:table-cell>
+                            </fo:table-row>
+                        </xsl:if>
                     </xsl:if>
                 </fo:table-body>
             </fo:table>

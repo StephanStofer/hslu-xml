@@ -60,7 +60,7 @@ if(isset($_POST['send'])){
         $xmlPath = '../../database/events.xml';
         $foXslPath = '../xslt/foConfirmation.xsl';
         $eventXslPath = '../xslt/events.xsl';
-        $pdfPath = '../xhtml/confirmation.pdf';
+        $pdfPath = '../xhtml/confirmation-'.$regId.'.pdf';
         $foFile = '../../database/confirmation.fo';
 
         $foData = generateFoFile($xmlPath, $foXslPath, $eventId,$regId);
@@ -69,12 +69,8 @@ if(isset($_POST['send'])){
         $serviceClient = new FOPServiceClient();
         $serviceClient->processFile($foFile, $pdfPath);
 
-        header("Location:../../routing.php?&eventId={$eventId}");
+        header("Location:../../routing.php?personId={$regId}&eventId={$eventId}");
 
-        /*echo '<h1>Herzlichen Dank für Ihre Anmeldung</h1>';
-        echo sprintf('<p>Ihre Anmeldung ist bei uns eingegangen.<br></p>');
-        echo sprintf('<p>Anmeldebestätigunge:<br><strong><a href="%s" target="_blank">Download PDF</a></strong></p>', $pdfPath);
-        echo sprintf('<a href="../../index.php">Zurück zur Startseite');*/
     } else {
         echo "<p>Die eingegebenen Daten können nicht verarbeitet werden. </br>Bitte füllen Sie Das Formular nochmals aus und kontrollieren Sie die Daten.</p>";
 		echo "<a href='../../singleevent.php?eventId=$eventId'>Zurück zum Event</a>";
@@ -82,6 +78,6 @@ if(isset($_POST['send'])){
     }
 
 } else {
-	echo "wrong form";
+    header("Location:/errorPage.php");
 }
 ?>

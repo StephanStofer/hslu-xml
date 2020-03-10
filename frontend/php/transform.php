@@ -1,11 +1,17 @@
 <?php
-
-function transformXml($xml_path, $xsl_path, $parameters = null)
+/** 
+ * Function transform the XML to a XHTML document. 
+ * @param resource $xmlPath contains the path to the XML and the XML document itself.
+ * @param resource $xslPath contains the path to the XSL and the XSL document itself.
+ * @param resource $parameters optional parameter. Holds parameter in a key-value array. 
+ *  
+*/
+function transformXml($xmlPath, $xslPath, $parameters = null)
 {
     $xml = new DOMDocument();
-    $xml->load($xml_path);
+    $xml->load($xmlPath);
     $xsl = new DOMDocument();
-    $xsl->load($xsl_path);
+    $xsl->load($xslPath);
 
     
     $processor = new XSLTProcessor();

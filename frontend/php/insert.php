@@ -58,9 +58,9 @@ if(isset($_POST['send'])){
         $dom->save($xml);
 
         $xmlPath = '../../database/events.xml';
-        $xslPath = '../xslt/pdf.xsl';
-        $pdfPath = '../xhtml/order.pdf';
-        $foFile = '../../database/order.fo';
+        $xslPath = '../xslt/foConfirmation.xsl';
+        $pdfPath = '../xhtml/confirmation.pdf';
+        $foFile = '../../database/confirmation.fo';
 
         $foData = generateFoFile($xmlPath, $xslPath, $eventid,$regId);
 

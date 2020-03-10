@@ -80,11 +80,11 @@
                             <i class="fas fa-map-marked-alt fa-3x mb-3"></i>
                             <h3 class="mb-4">Standort</h3>
                             <address>
-                                Sportzentrum Willisau
+                                Sportzentrum Wihlisau
                                 <br />
                                 Schlossfeldstrasse 10
                                 <br />
-                                6130 Willisau
+                                6220 Wihlisau
                             </address>
                         </div>
                     </div>
@@ -92,15 +92,15 @@
                         <div class="shop-info text">
                             <i class="fas fa-mobile-alt fa-3x mb-3"></i>
                             <h3 class="mb-4">Kontakt</h3>
-                            Tel: +41 41 970 12 12
+                            Tel: +41 41 970 99 99
                             <br />
-                            E-Mail: info@sportzentrum-willisau.ch
+                            E-Mail: info@sportzentrum-wihlisau.ch
                         </div>
                     </div>
                 </div>
                 <hr class="mt-5" />
             </div>
-            <p>© JuSt MaJo Web design 2020</p>
+            <p>© JuSt MaJo Web Programming 2020</p>
         </footer>
     </xsl:template>
 </xsl:stylesheet>

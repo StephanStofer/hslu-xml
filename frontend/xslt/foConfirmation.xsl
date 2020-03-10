@@ -24,13 +24,13 @@
                 </fo:static-content>
                 <fo:static-content flow-name="xsl-region-after" text-align="right" font-size="8pt">
                     <fo:block>
-                        Sportzentrum Willisau
+                        Sportzentrum Wihlisau
                     </fo:block>
                     <fo:block>
                         Schlossfeldstrasse 10
                     </fo:block>
                     <fo:block>
-                        6130 Willisau
+                        6220 Wihlisau
                     </fo:block>
                 </fo:static-content>
                 <fo:flow flow-name="xsl-region-body">

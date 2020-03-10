@@ -43,7 +43,7 @@ function generateFoFile($xmlPath, $xslPath, $eventId, $personId)
     $processor->setParameter('', 'personId', $personId);
 
     $foFile = $processor->transformToDoc($xml);
-    return $foFile->save("../../database/order.fo");
+    return $foFile->save("../../database/confirmation.fo");
 }
 
 ?>

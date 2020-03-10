@@ -34,7 +34,7 @@
         <participants>
             <person id="5e5ee34509c62" firstName="Maurizio" lastName="Hostettler" address="Gr&#xFC;nerweg 5" city="Bern" postCode="3134" email="maurizio.hostettler@gmail.com" phone="0975406870"/>
             <person id="5e6211f20dce8" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
-        <person id="5e674ae750972" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444" op1="selected"/></participants>
+        <person id="5e674ae750972" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444" op1="selected"/><person id="5e674d0b928f3" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444" op1="selected"/></participants>
         <additionalServices>
             <service title="Kletterschuhe" price="15" id="1"/>
         </additionalServices>

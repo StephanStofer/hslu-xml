@@ -142,7 +142,7 @@
                                 </button>
                             </div>
                         </form>
-                        <a href="singleEvent.php?eventid={$eventid}" class="btn btn-outline-primary">Zum Event</a>
+                        <a href="singleevent.php?eventid={$eventid}" class="btn btn-outline-primary">Zum Event</a>
                     </div>
                 </div>
             </div>

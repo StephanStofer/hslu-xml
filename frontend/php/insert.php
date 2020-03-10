@@ -55,24 +55,23 @@ if(isset($_POST['send'])){
     }
 
     if ($validated) {
-        echo "<script>console.log('validated' );</script>";
-
         $dom->save($xml);
 
         $xmlPath = '../../database/events.xml';
         $xslPath = '../xslt/pdf.xsl';
         $pdfPath = '../xhtml/order.pdf';
+        $foFile = '../../database/order.fo';
 
         $foData = generateFoFile($xmlPath, $xslPath, $eventid,$regId);
-        echo "<script>console.log('generate fo: " . print_r($foData) . "');</script>";
 
         // create an instance of the FOP client and perform service request.
         $serviceClient = new FOPServiceClient();
-        $serviceClient->processFile('../../database/order.fo', $pdfPath);
+        $serviceClient->processFile($foFile, $pdfPath);
 
         echo '<h1>Herzlichen Dank für Ihre Anmeldung</h1>';
-        echo sprintf('<p>Ihre Bestellung ist bei uns eingegangen.<br></p>');
-        echo sprintf('<p>Bestellbestätigung:<br><strong><a href="%s" target="_blank">download PDF</a></strong></p>', $pdfPath);
+        echo sprintf('<p>Ihre Anmeldung ist bei uns eingegangen.<br></p>');
+        echo sprintf('<p>Anmeldebestätigunge:<br><strong><a href="%s" target="_blank">Download PDF</a></strong></p>', $pdfPath);
+        echo sprintf('<a href="../../index.php">Zurück zur Startseite');
     } else {
         echo "<p>Die eingegebenen Daten können nicht verarbeitet werden. </br>Bitte füllen Sie Das Formular nochmals aus und kontrollieren Sie die Daten.</p>";
 		echo "<a href='../../singleevent.php?eventid=$eventid'>Zurück zum Event</a>";

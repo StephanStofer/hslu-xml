@@ -32,7 +32,7 @@
 					<xsl:value-of select="description"/>
 				</p>
 			</div>
-			<div class="shadow p-3 mb-5 mx-3 bg-white rounded"> 
+			<div class="shadow p-3 mb-5 mx-3 bg-white rounded">
 				<!-- falls maxteilnehmer gesetzt ist wird geschaut ob noch Platz vorhanden ist-->
 				<xsl:choose>
 					<xsl:when test="//event[@id=$eventId]/@maxparticipants">
@@ -50,7 +50,7 @@
 						<xsl:call-template name="form"/>
 					</xsl:otherwise>
 				</xsl:choose>
-			</div>			
+			</div>
 		</div>
 	</xsl:template>
 	<xsl:template name="form">
@@ -95,7 +95,9 @@
 				</xsl:for-each>
 			</div>
 			<button type="submit" name ="send" value="submit" class="btn btn-primary" >Anmelden</button>
-			<a href="forum.php?eventId={$eventId}" class="btn btn-outline-primary">Forum</a>
+			<div class="mt-4">
+				<a href="forum.php?eventId={$eventId}" class="btn btn-outline-primary">Zum Forum</a>
+			</div>
 		</form>
 	</xsl:template>
 </xsl:stylesheet>

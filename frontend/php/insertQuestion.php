@@ -2,9 +2,9 @@
  error_reporting(E_ALL);
  include 'validateXml.php';
 if(isset($_POST['sendQuestion'])){
-#minus submit, fname, lname, eventid
+#minus submit, fname, lname, eventId
 
-	$eventid = $_POST['eventid'];
+	$eventId = $_POST['eventId'];
 
 	$xml = '../../database/forum.xml';
 
@@ -19,16 +19,16 @@ if(isset($_POST['sendQuestion'])){
         foreach($dom->getElementsByTagName('event') as $event)
             $event->setIdAttribute('id',true);
 
-        $old_root_event = $dom->getElementById($eventid);
+        $old_root_event = $dom->getElementById($eventId);
         if ($old_root_event==null){
             $root_event = $dom->createElement('event');
-            $root_event->setAttribute("id",$eventid);
+            $root_event->setAttribute("id",$eventId);
         }else{
             $root_event = $old_root_event;
         }
     }else{
         $root_event = $dom->createElement('event');
-        $root_event->setAttribute("id",$eventid);
+        $root_event->setAttribute("id",$eventId);
     }
     $uniqueId = uniqid(rand(),true);
     $timestamp = date("Y-m-d");
@@ -61,7 +61,7 @@ if(isset($_POST['sendQuestion'])){
 
     if ($validated) {
         $dom->save($xml);
-        header("Location:/forum.php?eventid={$eventid}");
+        header("Location:/forum.php?eventId={$eventId}");
     } else {
         header("Location:/errorPage.php");
     }

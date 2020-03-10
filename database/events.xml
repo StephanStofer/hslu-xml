@@ -12,7 +12,7 @@
         <participants>
             <person id="5e5e339ada9c6" firstName="Maurizio" lastName="Hostettler" address="Gr&#xFC;nerweg 5" city="Bern" postCode="3013" email="maurizio.hostettler@gmail.com" phone="+41795406870" op1="selected" op3="selected"/>
             <person id="5e5edf5d83d5f" firstName="Maurizio" lastName="Hostettler" address="Gr&#xFC;nerweg 5" city="Bern" postCode="3013" email="maurizio.hostettler@gmail.com" phone="0975406870" op2="selected"/>
-        <person id="5e674b4b95765" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/></participants>
+        <person id="5e67663d8d2c8" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444" op2="selected"/></participants>
         <additionalServices>
             <service title="Schwimmhilfe" price="15" id="1"/>
             <service title="Betreuung" price="80" id="2"/>
@@ -34,7 +34,7 @@
         <participants>
             <person id="5e5ee34509c62" firstName="Maurizio" lastName="Hostettler" address="Gr&#xFC;nerweg 5" city="Bern" postCode="3134" email="maurizio.hostettler@gmail.com" phone="0975406870"/>
             <person id="5e6211f20dce8" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444"/>
-        <person id="5e674ae750972" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444" op1="selected"/><person id="5e674d0b928f3" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444" op1="selected"/></participants>
+        <person id="5e67667f78621" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444" op1="selected"/><person id="5e676836d1191" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444" op1="selected"/><person id="5e676894cf47e" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444" op1="selected"/></participants>
         <additionalServices>
             <service title="Kletterschuhe" price="15" id="1"/>
         </additionalServices>
@@ -50,7 +50,7 @@
         <participants>
             <person id="5e5ee0fe2d302" firstName="Maurizio" lastName="Hostettler" address="Gr&#xFC;nerweg 5" city="Bern" postCode="3013" email="maurizio.hostettler@gmail.com" phone="0975406870" op1="selected"/>
             <person id="5e5ee10eba9a3" firstName="Maurizio" lastName="Hostettler" address="Gr&#xFC;nerweg 5" city="Bern" postCode="3134" email="maurizio.hostettler@gmail.com" phone="0975406870"/>
-        </participants>
+        <person id="5e6769756e3fe" firstName="xml" lastName="master" address="xmlstrasse" city="xmlort" postCode="3333" email="xml@xslt.xd" phone="414444444" op1="selected" op2="selected"/></participants>
         <additionalServices>
             <service title="Trainer" price="60" id="1"/>
             <service title="Balljunge" price="30" id="2"/>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml">
+    <xsl:param name="pdfPath" select="default"/>
     <xsl:output method="xml" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" indent="yes" />
     <xsl:template match="/">
         <html lang="en">
@@ -21,6 +22,16 @@
                                 Dies ist eine Studienarbeit. Die Angebote auf dieser Webseite sind weder echt noch können sie gebucht werden.
                             </p>
                         </div>
+                        <xsl:if test="$pdfPath='frontend/xhtml/confirmation.pdf'">
+                            <div class="alert alert-success">
+                                <p class="text-center">
+                                    Herzlichen Dank für Ihre Anmeldung!
+                                    <br />
+                                    Laden Sie über folgenden Link Ihre Anmeldebestätigung herunter:<br />
+                                    <a href="{$pdfPath}" target="_blank"><strong>Download PDF</strong></a>
+                                </p>
+                            </div>
+                        </xsl:if>
                         <xsl:apply-templates select="/*" />
                     </div>
                     <xsl:call-template name="footer" />

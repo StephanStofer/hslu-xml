@@ -41,7 +41,7 @@
 						<xsl:text>card-img-top mb-5</xsl:text>
 					</xsl:attribute>
 				</img>
-				<a href="singleevent.php?eventid={@id}" class="btn btn-outline-primary">Details</a>
+				<a href="singleevent.php?eventId={@id}" class="btn btn-outline-primary">Details</a>
 			</div>
 			<div class="card-header">
 				<h5 class="my-0 font-weight-normal">

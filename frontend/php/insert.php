@@ -18,8 +18,8 @@ if(isset($_POST['send'])){
 	foreach($dom->getElementsByTagName('event') as $event)
 		$event->setIdAttribute('id',true);
 
-	$eventid = $_POST['eventid'];
- 	$event_root = $dom->getElementById($eventid);
+	$eventId = $_POST['eventId'];
+ 	$event_root = $dom->getElementById($eventId);
 	$participants = $event_root->getElementsByTagName('participants')->item(0);
 
 	//TODO Count participants and check wether maximum reached...
@@ -34,7 +34,7 @@ if(isset($_POST['send'])){
 
 	//Add every post item as attribute exept those in the array
 	foreach($_POST AS $key => $value) {
-		if (!in_array($key, array("eventid", "send"))){
+		if (!in_array($key, array("eventId", "send"))){
 		$newAttribute = $dom->createAttribute($key);
 		$newAttribute->value=($value);
 		$newPerson->appendChild($newAttribute);
@@ -58,24 +58,27 @@ if(isset($_POST['send'])){
         $dom->save($xml);
 
         $xmlPath = '../../database/events.xml';
-        $xslPath = '../xslt/foConfirmation.xsl';
+        $foXslPath = '../xslt/foConfirmation.xsl';
+        $eventXslPath = '../xslt/events.xsl';
         $pdfPath = '../xhtml/confirmation.pdf';
         $foFile = '../../database/confirmation.fo';
 
-        $foData = generateFoFile($xmlPath, $xslPath, $eventid,$regId);
+        $foData = generateFoFile($xmlPath, $foXslPath, $eventId,$regId);
 
         // create an instance of the FOP client and perform service request.
         $serviceClient = new FOPServiceClient();
         $serviceClient->processFile($foFile, $pdfPath);
 
-        echo '<h1>Herzlichen Dank für Ihre Anmeldung</h1>';
+        header("Location:../../routing.php?&eventId={$eventId}");
+
+        /*echo '<h1>Herzlichen Dank für Ihre Anmeldung</h1>';
         echo sprintf('<p>Ihre Anmeldung ist bei uns eingegangen.<br></p>');
         echo sprintf('<p>Anmeldebestätigunge:<br><strong><a href="%s" target="_blank">Download PDF</a></strong></p>', $pdfPath);
-        echo sprintf('<a href="../../index.php">Zurück zur Startseite');
+        echo sprintf('<a href="../../index.php">Zurück zur Startseite');*/
     } else {
         echo "<p>Die eingegebenen Daten können nicht verarbeitet werden. </br>Bitte füllen Sie Das Formular nochmals aus und kontrollieren Sie die Daten.</p>";
-		echo "<a href='../../singleevent.php?eventid=$eventid'>Zurück zum Event</a>";
-		header("Location:/errorPage.php");
+		echo "<a href='../../singleevent.php?eventId=$eventId'>Zurück zum Event</a>";
+        header("Location:/errorPage.php");
     }
 
 } else {

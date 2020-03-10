@@ -64,7 +64,7 @@ if (isset($_POST['sendAnswer'])) {
         $dom->save($xml);
         header("Location:/forum.php?eventid={$eventid}");
     } else {
-        echo print_r($validator->displayErrors());
+        header("Location:/errorPage.php");
     }
 
 

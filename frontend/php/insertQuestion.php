@@ -63,7 +63,7 @@ if(isset($_POST['sendQuestion'])){
         $dom->save($xml);
         header("Location:/forum.php?eventid={$eventid}");
     } else {
-        echo print_r($validator->displayErrors());
+        header("Location:/errorPage.php");
     }
 
 

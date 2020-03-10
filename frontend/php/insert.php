@@ -75,6 +75,7 @@ if(isset($_POST['send'])){
     } else {
         echo "<p>Die eingegebenen Daten können nicht verarbeitet werden. </br>Bitte füllen Sie Das Formular nochmals aus und kontrollieren Sie die Daten.</p>";
 		echo "<a href='../../singleevent.php?eventid=$eventid'>Zurück zum Event</a>";
+		header("Location:/errorPage.php");
     }
 
 } else {

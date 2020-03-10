@@ -42,7 +42,7 @@
 							</xsl:when>
 							<xsl:otherwise>
 								<h3>Leider ist der Kurs bereits ausgebucht</h3><br/>
-								<a href="forum.php?eventId={$eventId}" class="btn btn-outline-primary">Forum</a>
+								<a href="forum.php?eventId={$eventId}" class="btn btn-outline-primary">Zum Forum</a>
 							</xsl:otherwise>
 						</xsl:choose>
 					</xsl:when>

@@ -44,20 +44,4 @@ function generateFoFile($xmlPath, $xslPath, $eventId, $personId)
     return $foFile->save("../../database/confirmation.fo");
 }
 
-function routeBackToEvent($xmlPath, $xslPath, $eventId, $pdfPath){
-    $data = file_get_contents($xmlPath);
-    $xml = new DOMDocument();
-    $xml->loadXML($data);
-
-    $xsl = new DOMDocument();
-    $xsl->load($xslPath);
-
-    $processor = new XSLTProcessor();
-    $processor->importStylesheet($xsl);
-
-    $processor->setParameter('', 'eventId', $eventId);
-    $processor->setParameter('', 'pdfPath', $pdfPath);
-    print($processor->transformToXml($xml));
-}
-
 ?>

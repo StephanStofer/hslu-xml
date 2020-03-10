@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE xml>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml">
-    <xsl:param name="eventid" select="default" />
+    <xsl:param name="eventId" select="default" />
     <xsl:output method="xml" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" indent="yes" />
     <xsl:include href="page.xsl" />
-    <xsl:variable name="event" select="document('../../database/events.xml')/events/event[@id=$eventid]" />
+    <xsl:variable name="event" select="document('../../database/events.xml')/events/event[@id=$eventId]" />
 
     <xsl:template match="forum">
         <xsl:apply-templates select="forum" />
@@ -17,7 +17,7 @@
                 </h2>
             </div>
             <div class="card-body">
-                <xsl:for-each select="event[@id=$eventid]/question">
+                <xsl:for-each select="event[@id=$eventId]/question">
                     <xsl:sort select="position()" data-type="number" order="descending" />
                     <xsl:variable name="questionid" select="@id" />
                     <div class="row justify-content-center">
@@ -82,7 +82,7 @@
                             <div class="{@id}" style="display: none">
                                 <div class="mt-4">
                                     <form class="form needs-validation " action="frontend/php/insertAnswer.php" method="POST" accept-charset="UTF-8">
-                                        <input type="hidden" name="eventid" value="{$eventid}" />
+                                        <input type="hidden" name="eventId" value="{$eventId}" />
                                         <input type="hidden" name="questionid" value="{@id}" />
                                         <div class="form-row justify-content-center">
                                             <div class="form-group col-md-10">
@@ -112,7 +112,7 @@
                     <div style="width:600px;margin:0 auto" class="shadow p-3 mb-5 bg-white rounded">
                         <h4>Frage Stellen</h4>
                         <form class="form needs-validation mt-4 mb-4" action="frontend/php/insertQuestion.php" method="POST" accept-charset="UTF-8">
-                            <input type="hidden" name="eventid" value="{$eventid}" />
+                            <input type="hidden" name="eventId" value="{$eventId}" />
                             <div class="form-row justify-content-center">
                                 <div class="form-group col-md-10">
                                     <input type="text" class="form-control" maxlength="20" id="firstName" name="firstName" placeholder="Vorname" required="true" />

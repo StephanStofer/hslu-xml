@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xml>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml">
-	<xsl:param name="eventid" select="default"/>
+	<xsl:param name="eventId" select="default"/>
+	<xsl:param name="pdfPath" select="default"/>
 	<xsl:output method="xml" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" indent="yes"/>
 	<xsl:include href="page.xsl" />
 	<xsl:template match="events">
-		<xsl:apply-templates select="event[@id=$eventid]" />
+		<xsl:apply-templates select="event[@id=$eventId]" />
 	</xsl:template>
 	<xsl:template match="event">
 		<div class="card mb-4 shadow-sm text-center">
@@ -34,14 +35,14 @@
 			<div class="shadow p-3 mb-5 mx-3 bg-white rounded"> 
 				<!-- falls maxteilnehmer gesetzt ist wird geschaut ob noch Platz vorhanden ist-->
 				<xsl:choose>
-					<xsl:when test="//event[@id=$eventid]/@maxparticipants">				
+					<xsl:when test="//event[@id=$eventId]/@maxparticipants">
 						<xsl:choose>
-							<xsl:when test="count(//event[@id=$eventid]/participants/person) &lt; round(//event[@id=$eventid]/@maxparticipants)">
+							<xsl:when test="count(//event[@id=$eventId]/participants/person) &lt; round(//event[@id=$eventId]/@maxparticipants)">
 								<xsl:call-template name="form"/>
 							</xsl:when>
 							<xsl:otherwise>
 								<h3>Leider ist der Kurs bereits ausgebucht</h3><br/>
-								<a href="forum.php?eventid={$eventid}" class="btn btn-outline-primary">Forum</a>
+								<a href="forum.php?eventId={$eventId}" class="btn btn-outline-primary">Forum</a>
 							</xsl:otherwise>
 						</xsl:choose>
 					</xsl:when>
@@ -54,7 +55,7 @@
 	</xsl:template>
 	<xsl:template name="form">
 		<form action="frontend/php/insert.php" method="POST" accept-charset="UTF-8" class="needs-validation container">
-			<input type="hidden" name="eventid" value="{$eventid}"/>
+			<input type="hidden" name="eventId" value="{$eventId}"/>
 			<div class="form-row" >
 				<div class="form-group col-md-6">
 					<input type="text" class="form-control" id="firstName" name="firstName" placeholder="Vorname" required="true"/>
@@ -94,7 +95,7 @@
 				</xsl:for-each>
 			</div>
 			<button type="submit" name ="send" value="submit" class="btn btn-primary" >Anmelden</button>
-			<a href="forum.php?eventid={$eventid}" class="btn btn-outline-primary">Forum</a>
+			<a href="forum.php?eventId={$eventId}" class="btn btn-outline-primary">Forum</a>
 		</form>
 	</xsl:template>
 </xsl:stylesheet>

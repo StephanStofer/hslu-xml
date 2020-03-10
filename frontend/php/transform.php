@@ -19,20 +19,6 @@ function transformXml($xml_path, $xsl_path, $parameters = null)
     print($processor->transformToXml($xml));
 }
 
-function transformXmlId($xml_path, $xsl_path, $eventid)
-{
-    $xml = new DOMDocument();
-    $xml->load($xml_path);
-    $xsl = new DOMDocument();
-    $xsl->load($xsl_path);
-
-    $processor = new XSLTProcessor();
-    $processor->importStylesheet($xsl);
-	
-	$processor->setParameter('', 'eventid', $eventid);
-    print($processor->transformToXml($xml));
-}
-
 function generateFoFile($xmlPath, $xslPath, $eventId, $personId)
 {
     $data = file_get_contents($xmlPath);

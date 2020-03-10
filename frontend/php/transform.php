@@ -1,15 +1,21 @@
 <?php
 
-function transformXml($xml_path, $xsl_path)
+function transformXml($xml_path, $xsl_path, $parameters = null)
 {
     $xml = new DOMDocument();
     $xml->load($xml_path);
     $xsl = new DOMDocument();
     $xsl->load($xsl_path);
 
+    
     $processor = new XSLTProcessor();
     $processor->importStylesheet($xsl);
-
+    
+    if(!is_null($parameters)) {
+        foreach ($parameters as $key => $value) {
+            $processor->setParameter('', $key, $value); 
+        }
+    }
     print($processor->transformToXml($xml));
 }
 

@@ -70,6 +70,9 @@
                                                 <span style="margin-left: 40px">
                                                     <xsl:value-of select="firstName"/>
                                                 </span>
+                                                <span class="float-right">
+                                                    <xsl:value-of select="time"/>
+                                                </span>
                                             </div>
                                             <div align="left">
                                                 Antwort:

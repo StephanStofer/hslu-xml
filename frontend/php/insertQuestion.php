@@ -61,14 +61,14 @@ if(isset($_POST['sendQuestion'])){
 
     if ($validated) {
         $dom->save($xml);
-        header("Location:/forum.php?eventId={$eventId}");
+        header("Location:../../forum.php?eventId={$eventId}");
     } else {
-        header("Location:/errorPage.php");
+        header("Location:../../errorPage.php");
     }
 
 
 
 } else {
-	echo "wrong form";
+	header("Location:../../errorPage.php");
 }
 ?>
